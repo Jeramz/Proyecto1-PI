@@ -29,11 +29,10 @@ public class SITGUI extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         tabbedPane = new javax.swing.JTabbedPane();
-        panelRutas = new javax.swing.JPanel();
         panelBuses = new javax.swing.JPanel();
         panelAgregarBus = new javax.swing.JPanel();
         lbAgregarPlacaBus = new javax.swing.JLabel();
-        tfPlacaAgregar = new javax.swing.JTextField();
+        tfPlacaBusAgregar = new javax.swing.JTextField();
         lbModeloBusAgregar = new javax.swing.JLabel();
         tfModeloBusAgregar = new javax.swing.JTextField();
         lbMarcaBusAgregar = new javax.swing.JLabel();
@@ -47,11 +46,11 @@ public class SITGUI extends javax.swing.JFrame {
         btAgregarBus = new javax.swing.JButton();
         panelConsultarBus = new javax.swing.JPanel();
         btListarBuses = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabelPlacaBus = new javax.swing.JLabel();
+        jLabelModeloBus = new javax.swing.JLabel();
+        jLabelMarcaBus = new javax.swing.JLabel();
+        jLabelTipoBus = new javax.swing.JLabel();
+        jLabelCapacidadBus = new javax.swing.JLabel();
         tfPlacaBusConsultar = new javax.swing.JTextField();
         tfModeloBusConsultar = new javax.swing.JTextField();
         tfMarcaBusConsultar = new javax.swing.JTextField();
@@ -60,35 +59,85 @@ public class SITGUI extends javax.swing.JFrame {
         btConsultarBus = new javax.swing.JButton();
         lbRutaBus = new javax.swing.JLabel();
         comboRutaBusConsultar = new javax.swing.JComboBox<>();
-        lbCodigo = new javax.swing.JLabel();
+        lbCodigoB = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tfBuses = new javax.swing.JTextArea();
         panelUsuarios = new javax.swing.JPanel();
+        lbCodigoU = new javax.swing.JLabel();
+        panelAgregarUsuarios = new javax.swing.JPanel();
+        lbAgregarPlacaUsuario = new javax.swing.JLabel();
+        tfPlacaUsuarioAgregar = new javax.swing.JTextField();
+        lbModeloUsuarioAgregar = new javax.swing.JLabel();
+        tfModeloUsuarioAgregar = new javax.swing.JTextField();
+        lbMarcaUsuarioAgregar = new javax.swing.JLabel();
+        tfMarcaUsuarioAgregar = new javax.swing.JTextField();
+        lbTipoUsuarioAgregar = new javax.swing.JLabel();
+        tfTipoUsuarioAgregar = new javax.swing.JTextField();
+        comboRutaUsuarioAgregar = new javax.swing.JComboBox<>();
+        lbRutaUsuarioAgregar = new javax.swing.JLabel();
+        lbCapacidadUsuarioAgregar = new javax.swing.JLabel();
+        tfCapacidadUsuarioAgregar = new javax.swing.JTextField();
+        btAgregarUsuario = new javax.swing.JButton();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        tfUsuarios = new javax.swing.JTextArea();
+        panelConsultarUsuario = new javax.swing.JPanel();
+        btListarUsuarios = new javax.swing.JButton();
+        jLabelPlacaUsuario = new javax.swing.JLabel();
+        jLabelModeloUsuario = new javax.swing.JLabel();
+        jLabelMarcaUsuario = new javax.swing.JLabel();
+        jLabelTipoUsuario = new javax.swing.JLabel();
+        jLabelCapacidadUsuario = new javax.swing.JLabel();
+        tfPlacaUsuarioConsultar = new javax.swing.JTextField();
+        tfModeloUsuarioConsultar = new javax.swing.JTextField();
+        tfMarcaUsuarioConsultar = new javax.swing.JTextField();
+        tfTipoUsuarioConsultar = new javax.swing.JTextField();
+        tfCapacidadUsuarioConsultar = new javax.swing.JTextField();
+        btConsultarUsuario = new javax.swing.JButton();
+        lbRutaUsuario = new javax.swing.JLabel();
+        comboRutaUsuarioConsultar = new javax.swing.JComboBox<>();
+        panelRutas = new javax.swing.JPanel();
+        lbCodigoR = new javax.swing.JLabel();
+        panelAgregarRutas = new javax.swing.JPanel();
+        lbAgregarPlacaRuta = new javax.swing.JLabel();
+        tfPlacaRutaAgregar = new javax.swing.JTextField();
+        lbModeloRutaAgregar = new javax.swing.JLabel();
+        tfModeloRutaAgregar = new javax.swing.JTextField();
+        lbMarcaRutaAgregar = new javax.swing.JLabel();
+        tfMarcaRutaAgregar = new javax.swing.JTextField();
+        lbTipoRutaAgregar = new javax.swing.JLabel();
+        tfTipoRutaAgregar = new javax.swing.JTextField();
+        comboRutaRutaAgregar = new javax.swing.JComboBox<>();
+        lbRutaRutaAgregar = new javax.swing.JLabel();
+        lbCapacidadRutaAgregar = new javax.swing.JLabel();
+        tfCapacidadRutaAgregar = new javax.swing.JTextField();
+        btAgregarRuta = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        tfRutas = new javax.swing.JTextArea();
+        panelConsultarRuta = new javax.swing.JPanel();
+        btListarRutas = new javax.swing.JButton();
+        jLabelPlacaRuta = new javax.swing.JLabel();
+        jLabelModeloRuta = new javax.swing.JLabel();
+        jLabelMarcaRuta = new javax.swing.JLabel();
+        jLabelTipoRuta = new javax.swing.JLabel();
+        jLabelCapacidadRuta = new javax.swing.JLabel();
+        tfPlacaRutaConsultar = new javax.swing.JTextField();
+        tfModeloRutaConsultar = new javax.swing.JTextField();
+        tfMarcaRutaConsultar = new javax.swing.JTextField();
+        tfTipoRutaConsultar = new javax.swing.JTextField();
+        tfCapacidadRutaConsultar = new javax.swing.JTextField();
+        btConsultarRuta = new javax.swing.JButton();
+        lbRutaRuta = new javax.swing.JLabel();
+        comboRutaRutaConsultar = new javax.swing.JComboBox<>();
 
         jLabel1.setText("jLabel1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        panelRutas.setToolTipText("");
-
-        javax.swing.GroupLayout panelRutasLayout = new javax.swing.GroupLayout(panelRutas);
-        panelRutas.setLayout(panelRutasLayout);
-        panelRutasLayout.setHorizontalGroup(
-            panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 728, Short.MAX_VALUE)
-        );
-        panelRutasLayout.setVerticalGroup(
-            panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
-        );
-
-        tabbedPane.addTab("Rutas", panelRutas);
-
         panelAgregarBus.setBorder(javax.swing.BorderFactory.createTitledBorder("Agregar"));
 
         lbAgregarPlacaBus.setText("Placa");
 
-        tfPlacaAgregar.setToolTipText("");
+        tfPlacaBusAgregar.setToolTipText("");
 
         lbModeloBusAgregar.setText("Modelo");
 
@@ -107,23 +156,23 @@ public class SITGUI extends javax.swing.JFrame {
         panelAgregarBusLayout.setHorizontalGroup(
             panelAgregarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarBusLayout.createSequentialGroup()
-                .addGap(0, 24, Short.MAX_VALUE)
+                .addGap(0, 36, Short.MAX_VALUE)
                 .addGroup(panelAgregarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelAgregarBusLayout.createSequentialGroup()
-                        .addComponent(lbRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lbRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(comboRutaBusAgregar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGap(76, 76, 76)
                         .addComponent(btAgregarBus)
                         .addGap(67, 67, 67))
                     .addGroup(panelAgregarBusLayout.createSequentialGroup()
                         .addGroup(panelAgregarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbAgregarPlacaBus, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                            .addComponent(lbTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(lbTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                            .addComponent(lbAgregarPlacaBus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelAgregarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(tfTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                            .addComponent(tfPlacaAgregar))
+                            .addComponent(tfPlacaBusAgregar))
                         .addGap(18, 18, 18)
                         .addComponent(lbModeloBusAgregar)
                         .addGap(18, 18, 18)
@@ -146,7 +195,7 @@ public class SITGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelAgregarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbAgregarPlacaBus)
-                    .addComponent(tfPlacaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tfPlacaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbModeloBusAgregar)
                     .addComponent(tfModeloBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbMarcaBusAgregar)
@@ -175,15 +224,15 @@ public class SITGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Placa");
+        jLabelPlacaBus.setText("Placa");
 
-        jLabel3.setText("Modelo");
+        jLabelModeloBus.setText("Modelo");
 
-        jLabel4.setText("Marca");
+        jLabelMarcaBus.setText("Marca");
 
-        jLabel5.setText("Tipo");
+        jLabelTipoBus.setText("Tipo");
 
-        jLabel6.setText("Capacidad");
+        jLabelCapacidadBus.setText("Capacidad");
 
         tfModeloBusConsultar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,70 +261,64 @@ public class SITGUI extends javax.swing.JFrame {
         panelConsultarBusLayout.setHorizontalGroup(
             panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelConsultarBusLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(0, 0, 0)
                 .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelConsultarBusLayout.createSequentialGroup()
+                    .addGroup(panelConsultarBusLayout.createSequentialGroup()
+                        .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelMarcaBus)
+                            .addComponent(jLabelTipoBus)
+                            .addComponent(jLabelModeloBus)
+                            .addComponent(jLabelPlacaBus))
+                        .addGap(47, 47, 47)
+                        .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(tfTipoBusConsultar)
+                            .addComponent(tfMarcaBusConsultar)
+                            .addComponent(tfPlacaBusConsultar)
+                            .addComponent(tfModeloBusConsultar))
+                        .addGap(44, 44, 44))
+                    .addGroup(panelConsultarBusLayout.createSequentialGroup()
+                        .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelCapacidadBus)
+                            .addComponent(lbRutaBus))
+                        .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelConsultarBusLayout.createSequentialGroup()
+                                .addGap(35, 35, 35)
+                                .addComponent(comboRutaBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(panelConsultarBusLayout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(tfCapacidadBusConsultar)
+                                .addGap(44, 44, 44))))
+                    .addGroup(panelConsultarBusLayout.createSequentialGroup()
                         .addGap(12, 12, 12)
                         .addComponent(btConsultarBus)
                         .addGap(18, 18, 18)
                         .addComponent(btListarBuses)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(panelConsultarBusLayout.createSequentialGroup()
-                        .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelConsultarBusLayout.createSequentialGroup()
-                                .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))
-                                .addGap(56, 56, 56)
-                                .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tfTipoBusConsultar)
-                                    .addComponent(tfMarcaBusConsultar)))
-                            .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(panelConsultarBusLayout.createSequentialGroup()
-                                    .addComponent(jLabel2)
-                                    .addGap(60, 60, 60)
-                                    .addComponent(tfPlacaBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(panelConsultarBusLayout.createSequentialGroup()
-                                    .addComponent(jLabel3)
-                                    .addGap(51, 51, 51)
-                                    .addComponent(tfModeloBusConsultar))))
-                        .addGap(44, 44, 44))
-                    .addGroup(panelConsultarBusLayout.createSequentialGroup()
-                        .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(lbRutaBus))
-                        .addGap(35, 35, 35)
-                        .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(panelConsultarBusLayout.createSequentialGroup()
-                                .addComponent(tfCapacidadBusConsultar)
-                                .addGap(44, 44, 44))
-                            .addGroup(panelConsultarBusLayout.createSequentialGroup()
-                                .addComponent(comboRutaBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addContainerGap())))))
+                        .addContainerGap())))
         );
         panelConsultarBusLayout.setVerticalGroup(
             panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelConsultarBusLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
+                    .addComponent(jLabelPlacaBus)
                     .addComponent(tfPlacaBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(11, 11, 11)
                 .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfModeloBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel3))
+                    .addComponent(jLabelModeloBus))
                 .addGap(13, 13, 13)
                 .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tfMarcaBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4))
+                    .addComponent(jLabelMarcaBus))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                    .addComponent(jLabelTipoBus)
                     .addComponent(tfTipoBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(tfCapacidadBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(tfCapacidadBusConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelCapacidadBus))
                 .addGap(18, 18, 18)
                 .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lbRutaBus)
@@ -284,10 +327,10 @@ public class SITGUI extends javax.swing.JFrame {
                 .addGroup(panelConsultarBusLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btConsultarBus)
                     .addComponent(btListarBuses))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        lbCodigo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logoSIT.png"))); // NOI18N
+        lbCodigoB.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logoSIT.png"))); // NOI18N
 
         tfBuses.setEditable(false);
         tfBuses.setColumns(20);
@@ -302,7 +345,7 @@ public class SITGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(panelConsultarBus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lbCodigo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbCodigoB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
                 .addGroup(panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelAgregarBus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -312,33 +355,494 @@ public class SITGUI extends javax.swing.JFrame {
         panelBusesLayout.setVerticalGroup(
             panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelBusesLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(19, 19, 19)
                 .addGroup(panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(panelAgregarBus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(panelBusesLayout.createSequentialGroup()
-                        .addGap(8, 8, 8)
-                        .addComponent(lbCodigo)))
-                .addGap(18, 18, 18)
-                .addGroup(panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbCodigoB, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addGroup(panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelConsultarBus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
-                .addGap(30, 30, 30))
+                .addGap(24, 24, 24))
         );
 
         tabbedPane.addTab("Buses", panelBuses);
+
+        lbCodigoU.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logoSIT.png"))); // NOI18N
+
+        panelAgregarUsuarios.setBorder(javax.swing.BorderFactory.createTitledBorder("Agregar"));
+
+        lbAgregarPlacaUsuario.setText("Placa");
+
+        tfPlacaUsuarioAgregar.setToolTipText("");
+
+        lbModeloUsuarioAgregar.setText("Modelo");
+
+        lbMarcaUsuarioAgregar.setText("Marca");
+
+        lbTipoUsuarioAgregar.setText("Tipo");
+
+        lbRutaUsuarioAgregar.setText("Ruta");
+
+        lbCapacidadUsuarioAgregar.setText("Capacidad");
+
+        btAgregarUsuario.setText("Agregar");
+
+        javax.swing.GroupLayout panelAgregarUsuariosLayout = new javax.swing.GroupLayout(panelAgregarUsuarios);
+        panelAgregarUsuarios.setLayout(panelAgregarUsuariosLayout);
+        panelAgregarUsuariosLayout.setHorizontalGroup(
+            panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarUsuariosLayout.createSequentialGroup()
+                .addGap(0, 30, Short.MAX_VALUE)
+                .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbRutaUsuarioAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                    .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(lbTipoUsuarioAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                        .addComponent(lbAgregarPlacaUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAgregarUsuariosLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(tfTipoUsuarioAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                            .addComponent(tfPlacaUsuarioAgregar))
+                        .addGap(18, 18, 18)
+                        .addComponent(lbModeloUsuarioAgregar)
+                        .addGap(18, 18, 18)
+                        .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelAgregarUsuariosLayout.createSequentialGroup()
+                                .addComponent(lbCapacidadUsuarioAgregar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(tfCapacidadUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelAgregarUsuariosLayout.createSequentialGroup()
+                                .addComponent(tfModeloUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(lbMarcaUsuarioAgregar)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tfMarcaUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))
+                    .addGroup(panelAgregarUsuariosLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(comboRutaUsuarioAgregar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(76, 76, 76)
+                        .addComponent(btAgregarUsuario)
+                        .addGap(67, 67, 67))))
+        );
+        panelAgregarUsuariosLayout.setVerticalGroup(
+            panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAgregarUsuariosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbAgregarPlacaUsuario)
+                    .addComponent(tfPlacaUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbModeloUsuarioAgregar)
+                    .addComponent(tfModeloUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbMarcaUsuarioAgregar)
+                    .addComponent(tfMarcaUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTipoUsuarioAgregar)
+                    .addComponent(tfTipoUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbCapacidadUsuarioAgregar)
+                    .addComponent(tfCapacidadUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btAgregarUsuario)
+                    .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbRutaUsuarioAgregar)
+                        .addComponent(comboRutaUsuarioAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        tfUsuarios.setEditable(false);
+        tfUsuarios.setColumns(20);
+        tfUsuarios.setRows(5);
+        jScrollPane3.setViewportView(tfUsuarios);
+
+        panelConsultarUsuario.setBorder(javax.swing.BorderFactory.createTitledBorder("Consultar"));
+
+        btListarUsuarios.setText("Listar Buses");
+        btListarUsuarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btListarUsuariosActionPerformed(evt);
+            }
+        });
+
+        jLabelPlacaUsuario.setText("Placa");
+
+        jLabelModeloUsuario.setText("Modelo");
+
+        jLabelMarcaUsuario.setText("Marca");
+
+        jLabelTipoUsuario.setText("Tipo");
+
+        jLabelCapacidadUsuario.setText("Capacidad");
+
+        tfModeloUsuarioConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfModeloUsuarioConsultarActionPerformed(evt);
+            }
+        });
+
+        tfMarcaUsuarioConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfMarcaUsuarioConsultarActionPerformed(evt);
+            }
+        });
+
+        tfTipoUsuarioConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfTipoUsuarioConsultarActionPerformed(evt);
+            }
+        });
+
+        btConsultarUsuario.setText("Consultar");
+
+        lbRutaUsuario.setText("Ruta");
+
+        javax.swing.GroupLayout panelConsultarUsuarioLayout = new javax.swing.GroupLayout(panelConsultarUsuario);
+        panelConsultarUsuario.setLayout(panelConsultarUsuarioLayout);
+        panelConsultarUsuarioLayout.setHorizontalGroup(
+            panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelConsultarUsuarioLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelConsultarUsuarioLayout.createSequentialGroup()
+                        .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelConsultarUsuarioLayout.createSequentialGroup()
+                                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelCapacidadUsuario)
+                                    .addComponent(lbRutaUsuario))
+                                .addGap(35, 35, 35)
+                                .addComponent(comboRutaUsuarioConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelConsultarUsuarioLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(btConsultarUsuario)
+                                .addGap(18, 18, 18)
+                                .addComponent(btListarUsuarios)))
+                        .addContainerGap(18, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelConsultarUsuarioLayout.createSequentialGroup()
+                        .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelConsultarUsuarioLayout.createSequentialGroup()
+                                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelMarcaUsuario)
+                                    .addComponent(jLabelTipoUsuario))
+                                .addGap(62, 62, 62)
+                                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(tfMarcaUsuarioConsultar, javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(tfCapacidadUsuarioConsultar)
+                                    .addComponent(tfTipoUsuarioConsultar)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelConsultarUsuarioLayout.createSequentialGroup()
+                                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelPlacaUsuario)
+                                    .addComponent(jLabelModeloUsuario))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(tfPlacaUsuarioConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, 124, Short.MAX_VALUE)
+                                    .addComponent(tfModeloUsuarioConsultar))))
+                        .addGap(44, 44, 44))))
+        );
+        panelConsultarUsuarioLayout.setVerticalGroup(
+            panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelConsultarUsuarioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPlacaUsuario)
+                    .addComponent(tfPlacaUsuarioConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfModeloUsuarioConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelModeloUsuario))
+                .addGap(13, 13, 13)
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfMarcaUsuarioConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelMarcaUsuario))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTipoUsuario)
+                    .addComponent(tfTipoUsuarioConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCapacidadUsuario)
+                    .addComponent(tfCapacidadUsuarioConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(20, 20, 20)
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbRutaUsuario)
+                    .addComponent(comboRutaUsuarioConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelConsultarUsuarioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btConsultarUsuario)
+                    .addComponent(btListarUsuarios))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout panelUsuariosLayout = new javax.swing.GroupLayout(panelUsuarios);
         panelUsuarios.setLayout(panelUsuariosLayout);
         panelUsuariosLayout.setHorizontalGroup(
             panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 728, Short.MAX_VALUE)
+            .addGroup(panelUsuariosLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbCodigoU, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelConsultarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane3)
+                    .addComponent(panelAgregarUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         panelUsuariosLayout.setVerticalGroup(
             panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 460, Short.MAX_VALUE)
+            .addGroup(panelUsuariosLayout.createSequentialGroup()
+                .addGroup(panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelUsuariosLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(panelAgregarUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelUsuariosLayout.createSequentialGroup()
+                        .addGap(19, 19, 19)
+                        .addComponent(lbCodigoU, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3)
+                    .addComponent(panelConsultarUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(24, 24, 24))
         );
 
         tabbedPane.addTab("Usuarios", panelUsuarios);
+
+        panelRutas.setToolTipText("");
+
+        lbCodigoR.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logoSIT.png"))); // NOI18N
+
+        panelAgregarRutas.setBorder(javax.swing.BorderFactory.createTitledBorder("Agregar"));
+
+        lbAgregarPlacaRuta.setText("Placa");
+
+        tfPlacaRutaAgregar.setToolTipText("");
+
+        lbModeloRutaAgregar.setText("Modelo");
+
+        lbMarcaRutaAgregar.setText("Marca");
+
+        lbTipoRutaAgregar.setText("Tipo");
+
+        lbRutaRutaAgregar.setText("Ruta");
+
+        lbCapacidadRutaAgregar.setText("Capacidad");
+
+        btAgregarRuta.setText("Agregar");
+
+        javax.swing.GroupLayout panelAgregarRutasLayout = new javax.swing.GroupLayout(panelAgregarRutas);
+        panelAgregarRutas.setLayout(panelAgregarRutasLayout);
+        panelAgregarRutasLayout.setHorizontalGroup(
+            panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarRutasLayout.createSequentialGroup()
+                .addGap(0, 36, Short.MAX_VALUE)
+                .addGroup(panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelAgregarRutasLayout.createSequentialGroup()
+                        .addComponent(lbRutaRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(comboRutaRutaAgregar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(76, 76, 76)
+                        .addComponent(btAgregarRuta)
+                        .addGap(67, 67, 67))
+                    .addGroup(panelAgregarRutasLayout.createSequentialGroup()
+                        .addGroup(panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelAgregarRutasLayout.createSequentialGroup()
+                                .addComponent(lbTipoRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(tfTipoRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelAgregarRutasLayout.createSequentialGroup()
+                                .addComponent(lbAgregarPlacaRuta, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(tfPlacaRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lbModeloRutaAgregar)))
+                        .addGap(18, 18, 18)
+                        .addGroup(panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelAgregarRutasLayout.createSequentialGroup()
+                                .addComponent(lbCapacidadRutaAgregar)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(tfCapacidadRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(panelAgregarRutasLayout.createSequentialGroup()
+                                .addComponent(tfModeloRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(31, 31, 31)
+                                .addComponent(lbMarcaRutaAgregar)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tfMarcaRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(20, 20, 20))))
+        );
+        panelAgregarRutasLayout.setVerticalGroup(
+            panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelAgregarRutasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbAgregarPlacaRuta)
+                    .addComponent(tfPlacaRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbModeloRutaAgregar)
+                    .addComponent(tfModeloRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbMarcaRutaAgregar)
+                    .addComponent(tfMarcaRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbTipoRutaAgregar)
+                    .addComponent(tfTipoRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lbCapacidadRutaAgregar)
+                    .addComponent(tfCapacidadRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btAgregarRuta)
+                    .addGroup(panelAgregarRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(lbRutaRutaAgregar)
+                        .addComponent(comboRutaRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        tfRutas.setEditable(false);
+        tfRutas.setColumns(20);
+        tfRutas.setRows(5);
+        jScrollPane2.setViewportView(tfRutas);
+
+        panelConsultarRuta.setBorder(javax.swing.BorderFactory.createTitledBorder("Consultar"));
+
+        btListarRutas.setText("Listar Buses");
+        btListarRutas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btListarRutasActionPerformed(evt);
+            }
+        });
+
+        jLabelPlacaRuta.setText("Placa");
+
+        jLabelModeloRuta.setText("Modelo");
+
+        jLabelMarcaRuta.setText("Marca");
+
+        jLabelTipoRuta.setText("Tipo");
+
+        jLabelCapacidadRuta.setText("Capacidad");
+
+        tfModeloRutaConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfModeloRutaConsultarActionPerformed(evt);
+            }
+        });
+
+        tfMarcaRutaConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfMarcaRutaConsultarActionPerformed(evt);
+            }
+        });
+
+        tfTipoRutaConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfTipoRutaConsultarActionPerformed(evt);
+            }
+        });
+
+        btConsultarRuta.setText("Consultar");
+
+        lbRutaRuta.setText("Ruta");
+
+        javax.swing.GroupLayout panelConsultarRutaLayout = new javax.swing.GroupLayout(panelConsultarRuta);
+        panelConsultarRuta.setLayout(panelConsultarRutaLayout);
+        panelConsultarRutaLayout.setHorizontalGroup(
+            panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelConsultarRutaLayout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelConsultarRutaLayout.createSequentialGroup()
+                        .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabelMarcaRuta, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabelTipoRuta, javax.swing.GroupLayout.Alignment.LEADING))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(panelConsultarRutaLayout.createSequentialGroup()
+                        .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(panelConsultarRutaLayout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(btConsultarRuta)
+                                .addGap(18, 18, 18)
+                                .addComponent(btListarRutas))
+                            .addGroup(panelConsultarRutaLayout.createSequentialGroup()
+                                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabelModeloRuta)
+                                    .addComponent(jLabelPlacaRuta)
+                                    .addComponent(lbRutaRuta))
+                                .addGap(51, 51, 51)
+                                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(comboRutaRutaConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                        .addComponent(tfCapacidadRutaConsultar, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
+                                        .addComponent(tfTipoRutaConsultar)
+                                        .addComponent(tfPlacaRutaConsultar)
+                                        .addComponent(tfModeloRutaConsultar)
+                                        .addComponent(tfMarcaRutaConsultar))))
+                            .addComponent(jLabelCapacidadRuta))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+        );
+        panelConsultarRutaLayout.setVerticalGroup(
+            panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelConsultarRutaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPlacaRuta)
+                    .addComponent(tfPlacaRutaConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(11, 11, 11)
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfModeloRutaConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelModeloRuta))
+                .addGap(13, 13, 13)
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tfMarcaRutaConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabelMarcaRuta))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTipoRuta)
+                    .addComponent(tfTipoRutaConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelCapacidadRuta)
+                    .addComponent(tfCapacidadRutaConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbRutaRuta)
+                    .addComponent(comboRutaRutaConsultar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(14, 14, 14)
+                .addGroup(panelConsultarRutaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btConsultarRuta)
+                    .addComponent(btListarRutas))
+                .addContainerGap(34, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout panelRutasLayout = new javax.swing.GroupLayout(panelRutas);
+        panelRutas.setLayout(panelRutasLayout);
+        panelRutasLayout.setHorizontalGroup(
+            panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRutasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(lbCodigoR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelConsultarRuta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2)
+                    .addComponent(panelAgregarRutas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        panelRutasLayout.setVerticalGroup(
+            panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRutasLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelAgregarRutas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(lbCodigoR, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(12, 12, 12)
+                .addGroup(panelRutasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelConsultarRuta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2))
+                .addGap(24, 24, 24))
+        );
+
+        tabbedPane.addTab("Rutas", panelRutas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -369,6 +873,38 @@ public class SITGUI extends javax.swing.JFrame {
     private void tfTipoBusConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTipoBusConsultarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_tfTipoBusConsultarActionPerformed
+
+    private void btListarRutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListarRutasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btListarRutasActionPerformed
+
+    private void tfModeloRutaConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfModeloRutaConsultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfModeloRutaConsultarActionPerformed
+
+    private void tfMarcaRutaConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfMarcaRutaConsultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfMarcaRutaConsultarActionPerformed
+
+    private void tfTipoRutaConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTipoRutaConsultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfTipoRutaConsultarActionPerformed
+
+    private void btListarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListarUsuariosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btListarUsuariosActionPerformed
+
+    private void tfModeloUsuarioConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfModeloUsuarioConsultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfModeloUsuarioConsultarActionPerformed
+
+    private void tfMarcaUsuarioConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfMarcaUsuarioConsultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfMarcaUsuarioConsultarActionPerformed
+
+    private void tfTipoUsuarioConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfTipoUsuarioConsultarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfTipoUsuarioConsultarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -407,41 +943,105 @@ public class SITGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btAgregarBus;
+    private javax.swing.JButton btAgregarRuta;
+    private javax.swing.JButton btAgregarUsuario;
     private javax.swing.JButton btConsultarBus;
+    private javax.swing.JButton btConsultarRuta;
+    private javax.swing.JButton btConsultarUsuario;
     private javax.swing.JButton btListarBuses;
+    private javax.swing.JButton btListarRutas;
+    private javax.swing.JButton btListarUsuarios;
     private javax.swing.JComboBox<String> comboRutaBusAgregar;
     private javax.swing.JComboBox<String> comboRutaBusConsultar;
+    private javax.swing.JComboBox<String> comboRutaRutaAgregar;
+    private javax.swing.JComboBox<String> comboRutaRutaConsultar;
+    private javax.swing.JComboBox<String> comboRutaUsuarioAgregar;
+    private javax.swing.JComboBox<String> comboRutaUsuarioConsultar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabelCapacidadBus;
+    private javax.swing.JLabel jLabelCapacidadRuta;
+    private javax.swing.JLabel jLabelCapacidadUsuario;
+    private javax.swing.JLabel jLabelMarcaBus;
+    private javax.swing.JLabel jLabelMarcaRuta;
+    private javax.swing.JLabel jLabelMarcaUsuario;
+    private javax.swing.JLabel jLabelModeloBus;
+    private javax.swing.JLabel jLabelModeloRuta;
+    private javax.swing.JLabel jLabelModeloUsuario;
+    private javax.swing.JLabel jLabelPlacaBus;
+    private javax.swing.JLabel jLabelPlacaRuta;
+    private javax.swing.JLabel jLabelPlacaUsuario;
+    private javax.swing.JLabel jLabelTipoBus;
+    private javax.swing.JLabel jLabelTipoRuta;
+    private javax.swing.JLabel jLabelTipoUsuario;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JLabel lbAgregarPlacaBus;
+    private javax.swing.JLabel lbAgregarPlacaRuta;
+    private javax.swing.JLabel lbAgregarPlacaUsuario;
     private javax.swing.JLabel lbCapacidadBusAgregar;
-    private javax.swing.JLabel lbCodigo;
+    private javax.swing.JLabel lbCapacidadRutaAgregar;
+    private javax.swing.JLabel lbCapacidadUsuarioAgregar;
+    private javax.swing.JLabel lbCodigoB;
+    private javax.swing.JLabel lbCodigoR;
+    private javax.swing.JLabel lbCodigoU;
     private javax.swing.JLabel lbMarcaBusAgregar;
+    private javax.swing.JLabel lbMarcaRutaAgregar;
+    private javax.swing.JLabel lbMarcaUsuarioAgregar;
     private javax.swing.JLabel lbModeloBusAgregar;
+    private javax.swing.JLabel lbModeloRutaAgregar;
+    private javax.swing.JLabel lbModeloUsuarioAgregar;
     private javax.swing.JLabel lbRutaBus;
     private javax.swing.JLabel lbRutaBusAgregar;
+    private javax.swing.JLabel lbRutaRuta;
+    private javax.swing.JLabel lbRutaRutaAgregar;
+    private javax.swing.JLabel lbRutaUsuario;
+    private javax.swing.JLabel lbRutaUsuarioAgregar;
     private javax.swing.JLabel lbTipoBusAgregar;
+    private javax.swing.JLabel lbTipoRutaAgregar;
+    private javax.swing.JLabel lbTipoUsuarioAgregar;
     private javax.swing.JPanel panelAgregarBus;
+    private javax.swing.JPanel panelAgregarRutas;
+    private javax.swing.JPanel panelAgregarUsuarios;
     private javax.swing.JPanel panelBuses;
     private javax.swing.JPanel panelConsultarBus;
+    private javax.swing.JPanel panelConsultarRuta;
+    private javax.swing.JPanel panelConsultarUsuario;
     private javax.swing.JPanel panelRutas;
     private javax.swing.JPanel panelUsuarios;
     private javax.swing.JTabbedPane tabbedPane;
     private javax.swing.JTextArea tfBuses;
     private javax.swing.JTextField tfCapacidadBusAgregar;
     private javax.swing.JTextField tfCapacidadBusConsultar;
+    private javax.swing.JTextField tfCapacidadRutaAgregar;
+    private javax.swing.JTextField tfCapacidadRutaConsultar;
+    private javax.swing.JTextField tfCapacidadUsuarioAgregar;
+    private javax.swing.JTextField tfCapacidadUsuarioConsultar;
     private javax.swing.JTextField tfMarcaBusAgregar;
     private javax.swing.JTextField tfMarcaBusConsultar;
+    private javax.swing.JTextField tfMarcaRutaAgregar;
+    private javax.swing.JTextField tfMarcaRutaConsultar;
+    private javax.swing.JTextField tfMarcaUsuarioAgregar;
+    private javax.swing.JTextField tfMarcaUsuarioConsultar;
     private javax.swing.JTextField tfModeloBusAgregar;
     private javax.swing.JTextField tfModeloBusConsultar;
-    private javax.swing.JTextField tfPlacaAgregar;
+    private javax.swing.JTextField tfModeloRutaAgregar;
+    private javax.swing.JTextField tfModeloRutaConsultar;
+    private javax.swing.JTextField tfModeloUsuarioAgregar;
+    private javax.swing.JTextField tfModeloUsuarioConsultar;
+    private javax.swing.JTextField tfPlacaBusAgregar;
     private javax.swing.JTextField tfPlacaBusConsultar;
+    private javax.swing.JTextField tfPlacaRutaAgregar;
+    private javax.swing.JTextField tfPlacaRutaConsultar;
+    private javax.swing.JTextField tfPlacaUsuarioAgregar;
+    private javax.swing.JTextField tfPlacaUsuarioConsultar;
+    private javax.swing.JTextArea tfRutas;
     private javax.swing.JTextField tfTipoBusAgregar;
     private javax.swing.JTextField tfTipoBusConsultar;
+    private javax.swing.JTextField tfTipoRutaAgregar;
+    private javax.swing.JTextField tfTipoRutaConsultar;
+    private javax.swing.JTextField tfTipoUsuarioAgregar;
+    private javax.swing.JTextField tfTipoUsuarioConsultar;
+    private javax.swing.JTextArea tfUsuarios;
     // End of variables declaration//GEN-END:variables
 }
