@@ -15,24 +15,27 @@ import javax.swing.JOptionPane;
 public class SIT {
     Usuario miUsuario=new Usuario();
     ArrayList usuarios=new ArrayList();
-    
+
     Ruta miRuta=new Ruta();
     ArrayList rutas=new ArrayList();
-    
+
     public SIT(){
     }
-    
+
     public void agregarUsuario(Usuario usuario){
+        boolean existe=false;
         for(int i=0;i<usuarios.size();i++){
             Usuario auxUsuario=(Usuario)usuarios.get(i);
             if(usuario.getIdentificacion().equals(auxUsuario.getIdentificacion())){
                 JOptionPane.showMessageDialog(null, "El usuario ingresado ya existe");
-            }else{
-                usuarios.add(usuario);
+                existe=true;
             }
         }
+        if(!existe){
+            usuarios.add(usuario);
+        }
     }
-    
+
     public String consultarUsuario(String numero,String identificacion, String nombre, String direccion, String fecha, String saldo){
         boolean existe=false;
         String respuesta="Numero/Identificacion/Nombre/Direccion/Fecha/Saldo";
@@ -48,7 +51,7 @@ public class SIT {
         }
         return respuesta;
     }
-    
+
     public String listarUsuarios(){
         String respuesta="Numero/Identificacion/Nombre/Direccion/Fecha/Saldo";
         for(int i=0;i<usuarios.size();i++){
@@ -57,7 +60,7 @@ public class SIT {
         }
         return respuesta;
     }
-    
+
     public void agregarRuta(Ruta ruta){
         boolean existe=false;
         for(int i=0;i<rutas.size();i++){
@@ -71,7 +74,7 @@ public class SIT {
             rutas.add(ruta);
         }
     }
-    
+
     public String consultarRuta(String codigo,String nombre, String descripcion, String tipo){
         boolean existe=false;
         String respuesta="Codigo/Nombre/Descripcion/Tipo";
@@ -87,7 +90,7 @@ public class SIT {
         }
         return respuesta;
     }
-    
+
     public String listarRutas(){
         String respuesta="Codigo/Nombre/Descripcion/Tipo";
         for(int i=0;i<rutas.size();i++){
@@ -96,31 +99,51 @@ public class SIT {
         }
         return respuesta;
     }
-    
+
     public Ruta getRuta(String nombre){
     Ruta respuesta=new Ruta();
     for (int i=0; i< rutas.size(); i++){
         Ruta ruta= (Ruta) rutas.get(i);
         if(ruta.getNombre().equals(nombre)){
-            rutas.set(i, ruta); 
+            rutas.set(i, ruta);
             respuesta=(Ruta)rutas.get(i);
         }
     }
     return respuesta;
     }
-    
+
     public void agregarBusRuta(Bus bus, Ruta ruta){
             ruta.agregarBus(bus);
     }
-    
+
     public String consultarBusRuta(String placa,String modelo, String marca, String tipo, String capacidad, Ruta ruta){
-        return ruta.consultarBus(placa, modelo, marca, tipo, capacidad);
+        String listaBuses="Placa/Modelo/Marca/Tipo/Capacidad/Ruta";
+        if((placa.equals("")&&modelo.equals("")&&marca.equals("")&&tipo.equals("")&&capacidad.equals(""))){
+            if(ruta.listarBuses().equals("")){
+                JOptionPane.showMessageDialog(null, "No hay buses en la ruta");
+            }else{
+            listaBuses+=ruta.listarBuses();
+            }
+        }else{
+            try{
+            listaBuses=ruta.consultarBus(placa, modelo, marca, tipo, capacidad);
+            }catch(NullPointerException ex){
+                JOptionPane.showMessageDialog(null, "No existen buses en la ruta");
+            }
+        
+        }
+        return listaBuses;
     }
-    
-    public String listarBusesRuta(Ruta ruta){
-        return ruta.listarBuses();
+
+    public String listarBusesRuta(){
+        String respuesta="Placa/Modelo/Marca/Tipo/Capacidad/Ruta";
+        for(int i=0;i<rutas.size();i++){
+            Ruta ruta =(Ruta) rutas.get(i);
+            respuesta+=ruta.listarBuses();
+        }
+        return respuesta;
     }
-    
+
     //Retorna el numero de Rutas registradas
     public int numeroRutas(){
     int respuesta=0;

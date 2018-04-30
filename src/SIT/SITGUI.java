@@ -29,6 +29,7 @@ public class SITGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
         miSIT=new SIT();
         jLabel1 = new javax.swing.JLabel();
         tabbedPane = new javax.swing.JTabbedPane();
@@ -145,6 +146,11 @@ public class SITGUI extends javax.swing.JFrame {
         lbCapacidadBusAgregar.setText("Capacidad");
 
         btAgregarBus.setText("Agregar");
+        btAgregarBus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAgregarBusActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelAgregarBusesLayout = new javax.swing.GroupLayout(panelAgregarBuses);
         panelAgregarBuses.setLayout(panelAgregarBusesLayout);
@@ -248,6 +254,11 @@ public class SITGUI extends javax.swing.JFrame {
         });
 
         btConsultarBus.setText("Consultar");
+        btConsultarBus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConsultarBusActionPerformed(evt);
+            }
+        });
 
         lbRutaBusConsultar.setText("Ruta");
 
@@ -391,6 +402,11 @@ public class SITGUI extends javax.swing.JFrame {
         lbFechaUsuarioAgregar.setText("Fecha (D/M/A)");
 
         btAgregarUsuario.setText("Agregar");
+        btAgregarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btAgregarUsuarioActionPerformed(evt);
+            }
+        });
 
         lbSaldoUsuarioAgregar.setText("Saldo");
 
@@ -502,6 +518,11 @@ public class SITGUI extends javax.swing.JFrame {
         });
 
         btConsultarUsuario.setText("Consultar");
+        btConsultarUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConsultarUsuarioActionPerformed(evt);
+            }
+        });
 
         lbSaldoUsuarioConsultar.setText("Saldo");
 
@@ -727,6 +748,11 @@ public class SITGUI extends javax.swing.JFrame {
         });
 
         btConsultarRuta.setText("Consultar");
+        btConsultarRuta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btConsultarRutaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelConsultarRutasLayout = new javax.swing.GroupLayout(panelConsultarRutas);
         panelConsultarRutas.setLayout(panelConsultarRutasLayout);
@@ -835,7 +861,15 @@ public class SITGUI extends javax.swing.JFrame {
     }
 
     private void btListarBusesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListarBusesActionPerformed
-        taBuses.setText("Prueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\nPrueba\n");
+        taBuses.setText("");
+        String listaBuses="";
+        try{
+        String ruta =comboRutaBusConsultar.getSelectedItem().toString();
+        listaBuses=miSIT.listarBusesRuta();
+        }catch(NullPointerException ex){
+            JOptionPane.showMessageDialog(null, "No hay buses");
+        }
+        taBuses.setText(listaBuses);
     }//GEN-LAST:event_btListarBusesActionPerformed
 
     private void tfModeloBusConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfModeloBusConsultarActionPerformed
@@ -906,13 +940,80 @@ public class SITGUI extends javax.swing.JFrame {
         ruta.setNombre(nombre);
         ruta.setTipo(tipo);
         miSIT.agregarRuta(ruta);
-        
+
+        tfCodigoRutaAgregar.setText("");
+        tfNombreRutaAgregar.setText("");
+        tfTipoRutaAgregar.setText("");
+        taDescripcion.setText("");
+
         this.setcombo(listaRutas, comboRutaBusAgregar);
         this.setcombo(listaRutas, comboRutaBusConsultar);
-        
-        JOptionPane.showMessageDialog(null, miSIT.numeroRutas());
 
     }//GEN-LAST:event_btAgregarRutaActionPerformed
+
+    private void btAgregarBusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAgregarBusActionPerformed
+        // TODO add your handling code here:
+        String placa=tfPlacaBusAgregar.getText();
+        String modelo=tfModeloBusAgregar.getText();
+        String marca=tfMarcaBusAgregar.getText();
+        String tipo=tfTipoBusAgregar.getText();
+        String capacidad=tfCapacidadBusAgregar.getText();
+
+        Bus bus =new Bus();
+        bus.setPlaca(placa);
+        bus.setModelo(modelo);
+        bus.setMarca(marca);
+        bus.setTipo(tipo);
+        bus.setCapacidad(capacidad);
+        tfPlacaBusAgregar.setText("");
+        tfModeloBusAgregar.setText("");
+        tfMarcaBusAgregar.setText("");
+        tfTipoBusAgregar.setText("");
+        tfCapacidadBusAgregar.setText("");
+        try{
+        String ruta=comboRutaBusAgregar.getSelectedItem().toString();
+        miSIT.agregarBusRuta(bus,miSIT.getRuta(ruta));
+        }catch(NullPointerException ex){
+            JOptionPane.showMessageDialog(null, "Debe crear y seleccionar una ruta antes de crear un bus");
+        }
+    }//GEN-LAST:event_btAgregarBusActionPerformed
+
+    private void btConsultarBusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarBusActionPerformed
+        // TODO add your handling code here:
+        taBuses.setText("");
+        String placa =tfPlacaBusConsultar.getText();
+        String modelo =tfModeloBusConsultar.getText();
+        String marca =tfMarcaBusConsultar.getText();
+        String tipo =tfTipoBusConsultar.getText();
+        String capacidad =tfCapacidadBusConsultar.getText();
+        try{
+        String ruta =comboRutaBusConsultar.getSelectedItem().toString();
+       
+        tfPlacaBusConsultar.setText("");
+        tfModeloBusConsultar.setText("");
+        tfMarcaBusConsultar.setText("");
+        tfTipoBusConsultar.setText("");
+        tfCapacidadBusConsultar.setText("");
+
+        String listaBuses=miSIT.consultarBusRuta(placa,modelo,marca,tipo,capacidad,miSIT.getRuta(ruta));
+
+        taBuses.setText(listaBuses);
+        }catch(NullPointerException ex){
+            JOptionPane.showMessageDialog(null, "Error....debe crear una ruta antes de consultar");
+        }
+    }//GEN-LAST:event_btConsultarBusActionPerformed
+
+    private void btAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAgregarUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btAgregarUsuarioActionPerformed
+
+    private void btConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btConsultarUsuarioActionPerformed
+
+    private void btConsultarRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarRutaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btConsultarRutaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -961,8 +1062,8 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JButton btListarBuses;
     private javax.swing.JButton btListarRutas;
     private javax.swing.JButton btListarUsuarios;
-    private javax.swing.JComboBox comboRutaBusAgregar;
-    private javax.swing.JComboBox comboRutaBusConsultar;
+    private javax.swing.JComboBox<String> comboRutaBusAgregar;
+    private javax.swing.JComboBox<String> comboRutaBusConsultar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
