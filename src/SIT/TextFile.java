@@ -52,12 +52,13 @@ public class TextFile {
 
 
    public TextFile(){
+       /*
      try{
-       fBus=new FileInputStream("");
-       fRutas=new FileInputStream("");
-       fUsuarios=new FileInputStream("");
-       fDescuentos=new FileInputStream("");
-       fRecargas=new FileInputStream("");
+       fBus=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\buses.txt");
+       fRutas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\rutas.txt");
+       fUsuarios=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\usuarios.txt");
+       fDescuentos=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\descuentos.txt");
+       fRecargas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\recargas.txt");
 
        fwBus=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\buses.txt",true);
        fwRutas=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\rutas.txt",true);
@@ -86,7 +87,7 @@ public class TextFile {
        e.printStackTrace();
        System.out.println("error"+e.getMessage());
      }
-   }
+   }*/
 
 public boolean yaExiste(String archivo,String objeto){
          boolean respuesta=false;
