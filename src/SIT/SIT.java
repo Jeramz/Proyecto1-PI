@@ -5,7 +5,10 @@
  */
 package SIT;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import javax.swing.JOptionPane;
 
 /**
@@ -67,6 +70,154 @@ public class SIT {
         }
         }
         return respuesta;
+    }
+
+    public Usuario getUsuario(String identificacion){
+      Usuario respuesta=new Usuario();
+        for(int i=0;i<usuarios.size();i++){
+        Usuario usuario=(Usuario) usuarios.get(i);
+            if(usuario.getIdentificacion().equals(identificacion)){
+                respuesta=usuario;
+            }
+        }
+        return respuesta;
+    }
+
+    public void recargarUsuario(String identificacion,double saldo){
+        boolean existe=false;
+      for(int i=0;i<usuarios.size();i++){
+        Usuario usuario=(Usuario) usuarios.get(i);
+        if(usuario.getIdentificacion().equals(identificacion)){
+          Date date = new Date();
+          DateFormat hourdateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+          String fecha=hourdateFormat.format(date);
+          usuario.recarga(saldo,fecha);
+          usuarios.set(i,usuario);
+          existe=true;
+        }
+
+      }
+      if(!existe){
+          JOptionPane.showMessageDialog(null, "No se ha encontrado ningun usuario con ese numero de identificación");
+      }
+    }
+
+    public void descontarUsuario(String identificacion,double saldo){
+        boolean existe=false;
+      for(int i=0;i<usuarios.size();i++){
+        Usuario usuario=(Usuario) usuarios.get(i);
+        if(usuario.getIdentificacion().equals(identificacion)){
+          Date date = new Date();
+          DateFormat hourdateFormat = new SimpleDateFormat("HH:mm:ss dd/MM/yyyy");
+          String fecha=hourdateFormat.format(date);
+          usuario.descuento(saldo,fecha);
+          usuarios.set(i,usuario);
+          existe=true;
+        }
+      }
+      if(!existe){
+          JOptionPane.showMessageDialog(null, "No se ha encontrado ningun usuario con ese numero de identificación");
+      }
+    }
+
+    public String consultarRecargas(String mes){
+        String aux=mes;
+        if(mes.equals("Enero")){
+            mes="01";
+        }
+        if(mes.equals("Febero")){
+            mes="02";
+        }
+        if(mes.equals("Marzo")){
+            mes="03";
+        }
+        if(mes.equals("Abril")){
+            mes="04";
+        }
+        if(mes.equals("Mayo")){
+            mes="05";
+        }
+        if(mes.equals("Junio")){
+            mes="06";
+        }
+        if(mes.equals("Julio")){
+            mes="07";
+        }
+        if(mes.equals("Agosto")){
+            mes="08";
+        }
+        if(mes.equals("Septiembre")){
+            mes="09";
+        }
+        if(mes.equals("Octubre")){
+            mes="10";
+        }
+        if(mes.equals("Noviembre")){
+            mes="11";
+        }
+        if(mes.equals("Diciembre")){
+            mes="12";
+        }
+        String respuesta="";
+        double totalRecargas=0;
+        for(int i=0;i<usuarios.size();i++){
+            Usuario usuario=(Usuario) usuarios.get(i);
+
+            respuesta+=usuario.getRecargasMes(mes);
+            totalRecargas+=usuario.getRecaudadoMes(mes);
+        }
+
+        return "El total recaudado el mes de "+ aux +" es de: "+ totalRecargas+" \n"+"-----------------------------RECARGAS-----------------------------\n"+respuesta;
+    }
+
+    public String consultarDescuento(String mes){
+        String aux=mes;
+        if(mes.equals("Enero")){
+            mes="01";
+        }
+        if(mes.equals("Febero")){
+            mes="02";
+        }
+        if(mes.equals("Marzo")){
+            mes="03";
+        }
+        if(mes.equals("Abril")){
+            mes="04";
+        }
+        if(mes.equals("Mayo")){
+            mes="05";
+        }
+        if(mes.equals("Junio")){
+            mes="06";
+        }
+        if(mes.equals("Julio")){
+            mes="07";
+        }
+        if(mes.equals("Agosto")){
+            mes="08";
+        }
+        if(mes.equals("Septiembre")){
+            mes="09";
+        }
+        if(mes.equals("Octubre")){
+            mes="10";
+        }
+        if(mes.equals("Noviembre")){
+            mes="11";
+        }
+        if(mes.equals("Diciembre")){
+            mes="12";
+        }
+        String respuesta="";
+        double totalGastado=0;
+        for(int i=0;i<usuarios.size();i++){
+            Usuario usuario=(Usuario) usuarios.get(i);
+
+            respuesta+=usuario.getDescuentosMes(mes);
+            totalGastado+=usuario.getGastadoMes(mes);
+        }
+
+        return "El total gastado por los usuarios el mes de "+ aux +" es de: "+ totalGastado+" \n"+"-----------------------------RECARGAS-----------------------------\n"+respuesta;
     }
 
     public void agregarRuta(Ruta ruta){

@@ -29,7 +29,9 @@ public class SITGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+
         miSIT=new SIT();
+        listaRutas=new String[0];
         jLabel1 = new javax.swing.JLabel();
         tabbedPane = new javax.swing.JTabbedPane();
         panelBuses = new javax.swing.JPanel();
@@ -42,7 +44,6 @@ public class SITGUI extends javax.swing.JFrame {
         tfMarcaBusAgregar = new javax.swing.JTextField();
         lbTipoBusAgregar = new javax.swing.JLabel();
         tfTipoBusAgregar = new javax.swing.JTextField();
-        listaRutas=new String[0];
         comboRutaBusAgregar = new javax.swing.JComboBox(listaRutas);
         lbRutaBusAgregar = new javax.swing.JLabel();
         lbCapacidadBusAgregar = new javax.swing.JLabel();
@@ -124,6 +125,26 @@ public class SITGUI extends javax.swing.JFrame {
         tfNombreRutaConsultar = new javax.swing.JTextField();
         tfTipoRutaConsultar = new javax.swing.JTextField();
         btConsultarRuta = new javax.swing.JButton();
+        panelTarjetas = new javax.swing.JPanel();
+        lbLogoRutas4 = new javax.swing.JLabel();
+        panelRecargarTarjetas = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        tfIdentificacionRecargarTarjeta = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        tfSaldoRecargarTarjeta = new javax.swing.JTextField();
+        btRecargarTarjeta = new javax.swing.JButton();
+        panelDescontarTarjetas = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        tfIdentificacionDescontarTarjeta = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        tfSaldoDescontarTarjeta = new javax.swing.JTextField();
+        btDescontarTarjeta = new javax.swing.JButton();
+        panelConsultaMensual = new javax.swing.JPanel();
+        btRecargasConsultarTarjeta = new javax.swing.JButton();
+        btPasajerosMovilizadosConsultarTarjeta = new javax.swing.JButton();
+        comboMeses = new javax.swing.JComboBox(listaMeses);
+        jScrollPane5 = new javax.swing.JScrollPane();
+        taTarjetas = new javax.swing.JTextArea();
 
         jLabel1.setText("jLabel1");
 
@@ -159,7 +180,7 @@ public class SITGUI extends javax.swing.JFrame {
         panelAgregarBusesLayout.setHorizontalGroup(
             panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarBusesLayout.createSequentialGroup()
-                .addGap(0, 14, Short.MAX_VALUE)
+                .addGap(0, 107, Short.MAX_VALUE)
                 .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelAgregarBusesLayout.createSequentialGroup()
                         .addComponent(lbRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -375,9 +396,11 @@ public class SITGUI extends javax.swing.JFrame {
             .addGroup(panelBusesLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
                 .addGroup(panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(panelAgregarBuses, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbLogoBuses, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
-                .addGap(12, 12, 12)
+                    .addGroup(panelBusesLayout.createSequentialGroup()
+                        .addComponent(panelAgregarBuses, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 15, Short.MAX_VALUE))
+                    .addComponent(lbLogoBuses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(panelBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(panelConsultarBuses, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jScrollPane1))
@@ -428,7 +451,7 @@ public class SITGUI extends javax.swing.JFrame {
         panelAgregarUsuariosLayout.setHorizontalGroup(
             panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarUsuariosLayout.createSequentialGroup()
-                .addGap(0, 3, Short.MAX_VALUE)
+                .addGap(0, 49, Short.MAX_VALUE)
                 .addGroup(panelAgregarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbDireccionUsuarioAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lbNumeroUsuarioAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -554,7 +577,7 @@ public class SITGUI extends javax.swing.JFrame {
                                 .addComponent(btConsultarUsuario)
                                 .addGap(18, 18, 18)
                                 .addComponent(btListarUsuarios)))
-                        .addContainerGap(28, Short.MAX_VALUE))
+                        .addContainerGap(76, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelConsultarUsuariosLayout.createSequentialGroup()
                         .addGroup(panelConsultarUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(javax.swing.GroupLayout.Alignment.LEADING, panelConsultarUsuariosLayout.createSequentialGroup()
@@ -619,7 +642,7 @@ public class SITGUI extends javax.swing.JFrame {
             .addGroup(panelUsuariosLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbLogoUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, 252, Short.MAX_VALUE)
+                    .addComponent(lbLogoUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
                     .addComponent(panelConsultarUsuarios, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(panelUsuariosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -689,7 +712,7 @@ public class SITGUI extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(jScrollPane4))
                             .addGroup(panelAgregarRutasLayout.createSequentialGroup()
-                                .addGap(0, 44, Short.MAX_VALUE)
+                                .addGap(0, 138, Short.MAX_VALUE)
                                 .addComponent(tfCodigoRutaAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addComponent(lbNombreRutaAgregar)
@@ -840,6 +863,175 @@ public class SITGUI extends javax.swing.JFrame {
         );
 
         tabbedPane.addTab("Rutas", panelRutas);
+
+        lbLogoRutas4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logoSIT.png"))); // NOI18N
+
+        panelRecargarTarjetas.setBorder(javax.swing.BorderFactory.createTitledBorder("Recargar"));
+
+        jLabel2.setText("Identificacion");
+
+        jLabel3.setText("Saldo a recargar");
+
+        btRecargarTarjeta.setText("Recargar");
+        btRecargarTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btRecargarTarjetaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelRecargarTarjetasLayout = new javax.swing.GroupLayout(panelRecargarTarjetas);
+        panelRecargarTarjetas.setLayout(panelRecargarTarjetasLayout);
+        panelRecargarTarjetasLayout.setHorizontalGroup(
+            panelRecargarTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRecargarTarjetasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tfIdentificacionRecargarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tfSaldoRecargarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btRecargarTarjeta)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        panelRecargarTarjetasLayout.setVerticalGroup(
+            panelRecargarTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRecargarTarjetasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelRecargarTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(tfIdentificacionRecargarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(tfSaldoRecargarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btRecargarTarjeta))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelDescontarTarjetas.setBorder(javax.swing.BorderFactory.createTitledBorder("Descontar"));
+
+        jLabel4.setText("Identificacion");
+
+        jLabel5.setText("Saldo a descontar");
+
+        btDescontarTarjeta.setText("Descontar");
+        btDescontarTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btDescontarTarjetaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelDescontarTarjetasLayout = new javax.swing.GroupLayout(panelDescontarTarjetas);
+        panelDescontarTarjetas.setLayout(panelDescontarTarjetasLayout);
+        panelDescontarTarjetasLayout.setHorizontalGroup(
+            panelDescontarTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDescontarTarjetasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tfIdentificacionDescontarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(tfSaldoDescontarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btDescontarTarjeta)
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+        panelDescontarTarjetasLayout.setVerticalGroup(
+            panelDescontarTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelDescontarTarjetasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelDescontarTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(tfIdentificacionDescontarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(tfSaldoDescontarTarjeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btDescontarTarjeta))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        panelConsultaMensual.setBorder(javax.swing.BorderFactory.createTitledBorder("Consulta mensual"));
+
+        btRecargasConsultarTarjeta.setText("Recargas");
+        btRecargasConsultarTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btRecargasConsultarTarjetaActionPerformed(evt);
+            }
+        });
+
+        btPasajerosMovilizadosConsultarTarjeta.setText("pasajeros movilizados");
+        btPasajerosMovilizadosConsultarTarjeta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btPasajerosMovilizadosConsultarTarjetaActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout panelConsultaMensualLayout = new javax.swing.GroupLayout(panelConsultaMensual);
+        panelConsultaMensual.setLayout(panelConsultaMensualLayout);
+        panelConsultaMensualLayout.setHorizontalGroup(
+            panelConsultaMensualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelConsultaMensualLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelConsultaMensualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(comboMeses, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(panelConsultaMensualLayout.createSequentialGroup()
+                        .addComponent(btRecargasConsultarTarjeta)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btPasajerosMovilizadosConsultarTarjeta)))
+                .addGap(24, 24, 24))
+        );
+        panelConsultaMensualLayout.setVerticalGroup(
+            panelConsultaMensualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelConsultaMensualLayout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(comboMeses, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(62, 62, 62)
+                .addGroup(panelConsultaMensualLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btPasajerosMovilizadosConsultarTarjeta)
+                    .addComponent(btRecargasConsultarTarjeta))
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+
+        taTarjetas.setColumns(20);
+        taTarjetas.setRows(5);
+        jScrollPane5.setViewportView(taTarjetas);
+
+        javax.swing.GroupLayout panelTarjetasLayout = new javax.swing.GroupLayout(panelTarjetas);
+        panelTarjetas.setLayout(panelTarjetasLayout);
+        panelTarjetasLayout.setHorizontalGroup(
+            panelTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTarjetasLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(panelTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lbLogoRutas4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelConsultaMensual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(panelTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(panelRecargarTarjetas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(panelDescontarTarjetas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5))
+                .addContainerGap())
+        );
+        panelTarjetasLayout.setVerticalGroup(
+            panelTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelTarjetasLayout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addGroup(panelTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(panelTarjetasLayout.createSequentialGroup()
+                        .addComponent(panelRecargarTarjetas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(panelDescontarTarjetas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lbLogoRutas4, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(panelTarjetasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(panelConsultaMensual, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane5))
+                .addContainerGap())
+        );
+
+        tabbedPane.addTab("Tarjetas", panelTarjetas);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1065,7 +1257,12 @@ public class SITGUI extends javax.swing.JFrame {
         tfDireccionUsuarioConsultar.setText("");
         tfFechaUsuarioConsultar.setText("");
         try{
-        double saldo=Double.parseDouble(tfSaldoUsuarioConsultar.getText());
+        double saldo;
+        if(tfSaldoUsuarioConsultar.getText().equals("")){
+            saldo=0;
+        }else{
+        saldo=Double.parseDouble(tfSaldoUsuarioConsultar.getText());
+        }
         tfSaldoUsuarioConsultar.setText("");
         String listaUsuario=miSIT.consultarUsuario(numero, identificacion, nombre, direccion, fecha, saldo);
         taUsuarios.setText(listaUsuario);
@@ -1090,6 +1287,46 @@ public class SITGUI extends javax.swing.JFrame {
         taRutas.setText(listaRutas);
 
     }//GEN-LAST:event_btConsultarRutaActionPerformed
+
+    private void btDescontarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btDescontarTarjetaActionPerformed
+        // TODO add your handling code here:
+        try{
+        String identificacion=tfIdentificacionDescontarTarjeta.getText();
+        double saldo=Double.parseDouble(tfSaldoDescontarTarjeta.getText());
+        tfIdentificacionDescontarTarjeta.setText("");
+        tfSaldoDescontarTarjeta.setText("");
+        miSIT.descontarUsuario(identificacion, saldo);
+        }catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido");
+        }
+    }//GEN-LAST:event_btDescontarTarjetaActionPerformed
+
+    private void btRecargarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecargarTarjetaActionPerformed
+        // TODO add your handling code here:
+        try{
+        String identificacion=tfIdentificacionRecargarTarjeta.getText();
+        double saldo=Double.parseDouble(tfSaldoRecargarTarjeta.getText());
+        tfIdentificacionRecargarTarjeta.setText("");
+        tfSaldoRecargarTarjeta.setText("");
+        miSIT.recargarUsuario(identificacion,saldo);
+        }catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido");
+        }
+    }//GEN-LAST:event_btRecargarTarjetaActionPerformed
+
+    private void btRecargasConsultarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecargasConsultarTarjetaActionPerformed
+        // TODO add your handling code here:
+        String mes = comboMeses.getSelectedItem().toString();
+
+        taTarjetas.setText(miSIT.consultarRecargas(mes));
+    }//GEN-LAST:event_btRecargasConsultarTarjetaActionPerformed
+
+    private void btPasajerosMovilizadosConsultarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btPasajerosMovilizadosConsultarTarjetaActionPerformed
+        // TODO add your handling code here:
+        String mes = comboMeses.getSelectedItem().toString();
+
+        taTarjetas.setText(miSIT.consultarDescuento(mes));
+    }//GEN-LAST:event_btPasajerosMovilizadosConsultarTarjetaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1129,6 +1366,7 @@ public class SITGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     SIT miSIT;
     String listaRutas[];
+    String listaMeses[]={"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
     private javax.swing.JButton btAgregarBus;
     private javax.swing.JButton btAgregarRuta;
     private javax.swing.JButton btAgregarUsuario;
@@ -1136,16 +1374,26 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JButton btConsultarBus;
     private javax.swing.JButton btConsultarRuta;
     private javax.swing.JButton btConsultarUsuario;
+    private javax.swing.JButton btDescontarTarjeta;
     private javax.swing.JButton btListarBuses;
     private javax.swing.JButton btListarRutas;
     private javax.swing.JButton btListarUsuarios;
-    private javax.swing.JComboBox comboRutaBusAgregar;
-    private javax.swing.JComboBox comboRutaBusConsultar;
+    private javax.swing.JButton btPasajerosMovilizadosConsultarTarjeta;
+    private javax.swing.JButton btRecargarTarjeta;
+    private javax.swing.JButton btRecargasConsultarTarjeta;
+    private javax.swing.JComboBox comboMeses;
+    private javax.swing.JComboBox<String> comboRutaBusAgregar;
+    private javax.swing.JComboBox<String> comboRutaBusConsultar;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
     private javax.swing.JLabel lbCapacidadBusAgregar;
     private javax.swing.JLabel lbCapacidadBusConsultar;
     private javax.swing.JLabel lbCodigoRutaAgregar;
@@ -1159,6 +1407,7 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbIdentificacionUsuarioConsultar;
     private javax.swing.JLabel lbLogoBuses;
     private javax.swing.JLabel lbLogoRutas;
+    private javax.swing.JLabel lbLogoRutas4;
     private javax.swing.JLabel lbLogoUsuarios;
     private javax.swing.JLabel lbMarcaBusAgregar;
     private javax.swing.JLabel lbMarcaBusConsultar;
@@ -1184,14 +1433,19 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JPanel panelAgregarRutas;
     private javax.swing.JPanel panelAgregarUsuarios;
     private javax.swing.JPanel panelBuses;
+    private javax.swing.JPanel panelConsultaMensual;
     private javax.swing.JPanel panelConsultarBuses;
     private javax.swing.JPanel panelConsultarRutas;
     private javax.swing.JPanel panelConsultarUsuarios;
+    private javax.swing.JPanel panelDescontarTarjetas;
+    private javax.swing.JPanel panelRecargarTarjetas;
     private javax.swing.JPanel panelRutas;
+    private javax.swing.JPanel panelTarjetas;
     private javax.swing.JPanel panelUsuarios;
     private javax.swing.JTextArea taBuses;
     private javax.swing.JTextArea taDescripcion;
     private javax.swing.JTextArea taRutas;
+    private javax.swing.JTextArea taTarjetas;
     private javax.swing.JTextArea taUsuarios;
     private javax.swing.JTabbedPane tabbedPane;
     private javax.swing.JTextField tfCapacidadBusAgregar;
@@ -1202,6 +1456,8 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfDireccionUsuarioConsultar;
     private javax.swing.JTextField tfFechaUsuarioAgregar;
     private javax.swing.JTextField tfFechaUsuarioConsultar;
+    private javax.swing.JTextField tfIdentificacionDescontarTarjeta;
+    private javax.swing.JTextField tfIdentificacionRecargarTarjeta;
     private javax.swing.JTextField tfIdentificacionUsuarioAgregar;
     private javax.swing.JTextField tfIdentificacionUsuarioConsultar;
     private javax.swing.JTextField tfMarcaBusAgregar;
@@ -1217,6 +1473,8 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfPlacaBusAgregar;
     private javax.swing.JTextField tfPlacaBusConsultar;
     private javax.swing.JTextField tfSaldoAgregar;
+    private javax.swing.JTextField tfSaldoDescontarTarjeta;
+    private javax.swing.JTextField tfSaldoRecargarTarjeta;
     private javax.swing.JTextField tfSaldoUsuarioConsultar;
     private javax.swing.JTextField tfTipoBusAgregar;
     private javax.swing.JTextField tfTipoBusConsultar;
