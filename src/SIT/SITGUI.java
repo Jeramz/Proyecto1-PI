@@ -29,7 +29,6 @@ public class SITGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        
         miSIT=new SIT();
         jLabel1 = new javax.swing.JLabel();
         tabbedPane = new javax.swing.JTabbedPane();
@@ -45,11 +44,11 @@ public class SITGUI extends javax.swing.JFrame {
         tfTipoBusAgregar = new javax.swing.JTextField();
         listaRutas=new String[0];
         comboRutaBusAgregar = new javax.swing.JComboBox(listaRutas);
-        comboRutaBusConsultar = new javax.swing.JComboBox(listaRutas);
         lbRutaBusAgregar = new javax.swing.JLabel();
         lbCapacidadBusAgregar = new javax.swing.JLabel();
         tfCapacidadBusAgregar = new javax.swing.JTextField();
         btAgregarBus = new javax.swing.JButton();
+        btCargarDatos = new javax.swing.JButton();
         panelConsultarBuses = new javax.swing.JPanel();
         btListarBuses = new javax.swing.JButton();
         lbPlacaBusConsultar = new javax.swing.JLabel();
@@ -64,6 +63,7 @@ public class SITGUI extends javax.swing.JFrame {
         tfCapacidadBusConsultar = new javax.swing.JTextField();
         btConsultarBus = new javax.swing.JButton();
         lbRutaBusConsultar = new javax.swing.JLabel();
+        comboRutaBusConsultar = new javax.swing.JComboBox(listaRutas);
         lbLogoBuses = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         taBuses = new javax.swing.JTextArea();
@@ -152,20 +152,20 @@ public class SITGUI extends javax.swing.JFrame {
             }
         });
 
+        btCargarDatos.setText("Cargar datos");
+
         javax.swing.GroupLayout panelAgregarBusesLayout = new javax.swing.GroupLayout(panelAgregarBuses);
         panelAgregarBuses.setLayout(panelAgregarBusesLayout);
         panelAgregarBusesLayout.setHorizontalGroup(
             panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarBusesLayout.createSequentialGroup()
-                .addGap(0, 36, Short.MAX_VALUE)
+                .addGap(0, 14, Short.MAX_VALUE)
                 .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelAgregarBusesLayout.createSequentialGroup()
                         .addComponent(lbRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(comboRutaBusAgregar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(76, 76, 76)
-                        .addComponent(btAgregarBus)
-                        .addGap(67, 67, 67))
+                        .addGap(214, 214, 214))
                     .addGroup(panelAgregarBusesLayout.createSequentialGroup()
                         .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(lbTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
@@ -179,15 +179,22 @@ public class SITGUI extends javax.swing.JFrame {
                         .addGap(18, 18, 18)
                         .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                                .addComponent(lbCapacidadBusAgregar)
+                                .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelAgregarBusesLayout.createSequentialGroup()
+                                        .addComponent(lbCapacidadBusAgregar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(tfCapacidadBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelAgregarBusesLayout.createSequentialGroup()
+                                        .addComponent(tfModeloBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(lbMarcaBusAgregar)))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfCapacidadBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tfMarcaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                                .addComponent(tfModeloBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(lbMarcaBusAgregar)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tfMarcaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(60, 60, 60)
+                                .addComponent(btAgregarBus)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(btCargarDatos)))
                         .addGap(20, 20, 20))))
         );
         panelAgregarBusesLayout.setVerticalGroup(
@@ -208,11 +215,11 @@ public class SITGUI extends javax.swing.JFrame {
                     .addComponent(lbCapacidadBusAgregar)
                     .addComponent(tfCapacidadBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lbRutaBusAgregar)
+                    .addComponent(comboRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btAgregarBus)
-                    .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(lbRutaBusAgregar)
-                        .addComponent(comboRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(btCargarDatos))
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -886,6 +893,9 @@ public class SITGUI extends javax.swing.JFrame {
 
     private void btListarRutasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListarRutasActionPerformed
         // TODO add your handling code here:
+        taRutas.setText("");
+        String listaRutas=miSIT.listarRutas();
+        taRutas.setText(listaRutas);
     }//GEN-LAST:event_btListarRutasActionPerformed
 
     private void tfNombreRutaConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfNombreRutaConsultarActionPerformed
@@ -898,6 +908,11 @@ public class SITGUI extends javax.swing.JFrame {
 
     private void btListarUsuariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btListarUsuariosActionPerformed
         // TODO add your handling code here:
+        taUsuarios.setText("");
+        String listaUsuarios="";
+        listaUsuarios=miSIT.listarUsuarios();
+        taUsuarios.setText(listaUsuarios);
+
     }//GEN-LAST:event_btListarUsuariosActionPerformed
 
     private void tfIdentificacionUsuarioConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfIdentificacionUsuarioConsultarActionPerformed
@@ -965,6 +980,7 @@ public class SITGUI extends javax.swing.JFrame {
         bus.setMarca(marca);
         bus.setTipo(tipo);
         bus.setCapacidad(capacidad);
+
         tfPlacaBusAgregar.setText("");
         tfModeloBusAgregar.setText("");
         tfMarcaBusAgregar.setText("");
@@ -988,7 +1004,7 @@ public class SITGUI extends javax.swing.JFrame {
         String capacidad =tfCapacidadBusConsultar.getText();
         try{
         String ruta =comboRutaBusConsultar.getSelectedItem().toString();
-       
+
         tfPlacaBusConsultar.setText("");
         tfModeloBusConsultar.setText("");
         tfMarcaBusConsultar.setText("");
@@ -1005,14 +1021,74 @@ public class SITGUI extends javax.swing.JFrame {
 
     private void btAgregarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btAgregarUsuarioActionPerformed
         // TODO add your handling code here:
+        String numero=tfNumeroUsuarioAgregar.getText();
+        String identificacion=tfIdentificacionUsuarioAgregar.getText();
+        String nombre=tfNombreUsuarioAgregar.getText();
+        String direccion=tfDireccionUsuarioAgregar.getText();
+        String fecha=tfFechaUsuarioAgregar.getText();
+
+        tfNumeroUsuarioAgregar.setText("");
+        tfIdentificacionUsuarioAgregar.setText("");
+        tfNombreUsuarioAgregar.setText("");
+        tfDireccionUsuarioAgregar.setText("");
+        tfFechaUsuarioAgregar.setText("");
+        try{
+        double saldo=Double.parseDouble(tfSaldoAgregar.getText());
+        tfSaldoAgregar.setText("");
+        Usuario usuario =new Usuario();
+        usuario.setNumero(numero);
+        usuario.setIdentificacion(identificacion);
+        usuario.setNombre(nombre);
+        usuario.setDireccion(direccion);
+        usuario.setFecha(fecha);
+        usuario.setSaldo(saldo);
+
+        miSIT.agregarUsuario(usuario);
+        }
+        catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "El valor ingresado en saldo debe ser un número (0-9)");
+        }
     }//GEN-LAST:event_btAgregarUsuarioActionPerformed
 
     private void btConsultarUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarUsuarioActionPerformed
         // TODO add your handling code here:
+        taUsuarios.setText("");
+        String numero=tfNumeroUsuarioConsultar.getText();
+        String identificacion=tfIdentificacionUsuarioConsultar.getText();
+        String nombre=tfNombreUsuarioConsultar.getText();
+        String direccion=tfDireccionUsuarioConsultar.getText();
+        String fecha=tfFechaUsuarioConsultar.getText();
+
+        tfNumeroUsuarioConsultar.setText("");
+        tfIdentificacionUsuarioConsultar.setText("");
+        tfNombreUsuarioConsultar.setText("");
+        tfDireccionUsuarioConsultar.setText("");
+        tfFechaUsuarioConsultar.setText("");
+        try{
+        double saldo=Double.parseDouble(tfSaldoUsuarioConsultar.getText());
+        tfSaldoUsuarioConsultar.setText("");
+        String listaUsuario=miSIT.consultarUsuario(numero, identificacion, nombre, direccion, fecha, saldo);
+        taUsuarios.setText(listaUsuario);
+        }
+        catch(NumberFormatException ex){
+            JOptionPane.showMessageDialog(null, "El valor ingresado en saldo debe ser un número (0-9)");
+        }
     }//GEN-LAST:event_btConsultarUsuarioActionPerformed
 
     private void btConsultarRutaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btConsultarRutaActionPerformed
         // TODO add your handling code here:
+        taRutas.setText("");
+        String codigo=tfCodigoRutaConsultar.getText();
+        String nombre=tfNombreRutaConsultar.getText();
+        String tipo=tfTipoRutaConsultar.getText();
+
+        tfCodigoRutaConsultar.setText("");
+        tfNombreRutaConsultar.setText("");
+        tfTipoRutaConsultar.setText("");
+
+        String listaRutas=miSIT.consultarRuta(codigo, nombre, tipo);
+        taRutas.setText(listaRutas);
+
     }//GEN-LAST:event_btConsultarRutaActionPerformed
 
     /**
@@ -1056,6 +1132,7 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JButton btAgregarBus;
     private javax.swing.JButton btAgregarRuta;
     private javax.swing.JButton btAgregarUsuario;
+    private javax.swing.JButton btCargarDatos;
     private javax.swing.JButton btConsultarBus;
     private javax.swing.JButton btConsultarRuta;
     private javax.swing.JButton btConsultarUsuario;
