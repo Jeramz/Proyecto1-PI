@@ -29,7 +29,8 @@ public class SITGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+        
+        guardarDatos=new TextFile();
         miSIT=new SIT();
         listaRutas=new String[0];
         jLabel1 = new javax.swing.JLabel();
@@ -1317,6 +1318,7 @@ public class SITGUI extends javax.swing.JFrame {
     private void btRecargasConsultarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecargasConsultarTarjetaActionPerformed
         // TODO add your handling code here:
         String mes = comboMeses.getSelectedItem().toString();
+        guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
 
         taTarjetas.setText(miSIT.consultarRecargas(mes));
     }//GEN-LAST:event_btRecargasConsultarTarjetaActionPerformed
@@ -1364,6 +1366,7 @@ public class SITGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    TextFile guardarDatos;
     SIT miSIT;
     String listaRutas[];
     String listaMeses[]={"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
