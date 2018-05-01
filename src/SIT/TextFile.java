@@ -53,11 +53,11 @@ public class TextFile {
 
    public TextFile(){
      try{
-       fBus=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\buses.txt");
-       fRutas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\rutas.txt");
-       fUsuarios=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\usuarios.txt");
-       fDescuentos=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\descuentos.txt");
-       fRecargas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\recargas.txt");
+       fBus=new FileInputStream("");
+       fRutas=new FileInputStream("");
+       fUsuarios=new FileInputStream("");
+       fDescuentos=new FileInputStream("");
+       fRecargas=new FileInputStream("");
 
        fwBus=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\buses.txt",true);
        fwRutas=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\rutas.txt",true);
