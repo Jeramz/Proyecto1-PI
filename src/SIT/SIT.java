@@ -217,7 +217,7 @@ public class SIT {
             totalGastado+=usuario.getGastadoMes(mes);
         }
 
-        return "El total gastado por los usuarios el mes de "+ aux +" es de: "+ totalGastado+" \n"+"-----------------------------RECARGAS-----------------------------\n"+respuesta;
+        return "El total gastado por los usuarios el mes de "+ aux +" es de: "+ totalGastado+" \n"+"-----------------------------DESCUENTOS-----------------------------\n"+respuesta;
     }
 
     public void agregarRuta(Ruta ruta){
