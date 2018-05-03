@@ -175,6 +175,11 @@ public class SITGUI extends javax.swing.JFrame {
         });
 
         btCargarDatos.setText("Cargar datos");
+        btCargarDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCargarDatosActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelAgregarBusesLayout = new javax.swing.GroupLayout(panelAgregarBuses);
         panelAgregarBuses.setLayout(panelAgregarBusesLayout);
@@ -1277,6 +1282,7 @@ public class SITGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         taRutas.setText("");
         String codigo=tfCodigoRutaConsultar.getText();
+        
         String nombre=tfNombreRutaConsultar.getText();
         String tipo=tfTipoRutaConsultar.getText();
 
@@ -1285,6 +1291,7 @@ public class SITGUI extends javax.swing.JFrame {
         tfTipoRutaConsultar.setText("");
 
         String listaRutas=miSIT.consultarRuta(codigo, nombre, tipo);
+        
         taRutas.setText(listaRutas);
 
     }//GEN-LAST:event_btConsultarRutaActionPerformed
@@ -1301,7 +1308,12 @@ public class SITGUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido");
         }
     }//GEN-LAST:event_btDescontarTarjetaActionPerformed
-
+    private void btCargarDatosActionPerformed(java.awt.event.ActionEvent evt){
+        guardarDatos.cargarDatos(miSIT);
+        
+        this.setcombo(listaRutas, comboRutaBusAgregar);
+        this.setcombo(listaRutas, comboRutaBusConsultar);
+    }
     private void btRecargarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecargarTarjetaActionPerformed
         // TODO add your handling code here:
         try{
@@ -1319,7 +1331,7 @@ public class SITGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         String mes = comboMeses.getSelectedItem().toString();
         guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
-
+        guardarDatos.cerrar();
         taTarjetas.setText(miSIT.consultarRecargas(mes));
     }//GEN-LAST:event_btRecargasConsultarTarjetaActionPerformed
 

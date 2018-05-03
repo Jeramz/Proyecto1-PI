@@ -8,11 +8,13 @@ package SIT;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.DataInputStream;
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -52,19 +54,20 @@ public class TextFile {
 
 
    public TextFile(){
-       /*
+       
      try{
-       fBus=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\buses.txt");
-       fRutas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\rutas.txt");
-       fUsuarios=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\usuarios.txt");
-       fDescuentos=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\descuentos.txt");
-       fRecargas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\recargas.txt");
 
-       fwBus=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\buses.txt",true);
-       fwRutas=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\rutas.txt",true);
-       fwUsuarios=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\usuarios.txt",true);
-       fwDescuentos=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\descuentos.txt",true);
-       fwRecargas=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\recargas.txt",true);
+       fBus=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\buses.txt");
+       fRutas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\rutas.txt");
+       fUsuarios=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\usuarios.txt");
+       fDescuentos=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\descuentos.txt");
+       fRecargas=new FileInputStream("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\recargas.txt");
+
+       fwBus=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\buses.txt",true);
+       fwRutas=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\rutas.txt",true);
+       fwUsuarios=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\usuarios.txt",true);
+       fwDescuentos=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\descuentos.txt",true);
+       fwRecargas=new FileWriter("C:\\Users\\Jesús Ramírez\\Documents\\NetBeansProjects\\Proyecto1-PI\\src\\SIT\\recargas.txt",true);
 
        bwBus=new BufferedWriter(fwBus);
        bwRutas=new BufferedWriter(fwRutas);
@@ -87,7 +90,7 @@ public class TextFile {
        e.printStackTrace();
        System.out.println("error"+e.getMessage());
      }
-   }*/
+   }
 
 public boolean yaExiste(String archivo,String objeto){
          boolean respuesta=false;
@@ -100,7 +103,7 @@ public boolean yaExiste(String archivo,String objeto){
                 while((linea=brBus.readLine())!= null){
                     if((objeto.equals(linea))){
                         respuesta=true;
-                        linea="";
+                        
                     }
                 }
                 
@@ -111,7 +114,7 @@ public boolean yaExiste(String archivo,String objeto){
                 while((linea=brRutas.readLine())!= null){
                     if((objeto.equals(linea))){
                         respuesta=true;
-                        linea="";
+                        
                 }
                 }
             }
@@ -121,7 +124,7 @@ public boolean yaExiste(String archivo,String objeto){
                 while((linea=brUsuarios.readLine())!= null){
                     if((objeto.equals(linea))){
                         respuesta=true;
-                        linea="";
+                        
                 }
                 }
             }
@@ -131,7 +134,7 @@ public boolean yaExiste(String archivo,String objeto){
                 while((linea=brDescuentos.readLine())!= null){
                     if((objeto.equals(linea))){
                         respuesta=true;
-                        linea="";
+                        
                 }
                 }
             }
@@ -141,7 +144,7 @@ public boolean yaExiste(String archivo,String objeto){
                 while((linea=brRecargas.readLine())!= null){
                     if((objeto.equals(linea))){
                         respuesta=true;
-                        linea="";
+                        
                 }
                 }
             }
@@ -157,8 +160,8 @@ public void guardar(ArrayList rutas,ArrayList usuarios){
             
         for(int i=0;i<rutas.size();i++){
             Ruta ruta= (Ruta) rutas.get(i);
-            if(!(this.yaExiste("fBus",ruta.getCodigo()+"/"+ruta.getNombre()+"/"+ruta.getTipo()+ruta.getDescripcion()))){
-                bwRutas.write(ruta.getCodigo()+"/"+ruta.getNombre()+"/"+ruta.getTipo()+ruta.getDescripcion());
+            if(!(this.yaExiste("fRutas",ruta.getCodigo()+"/"+ruta.getNombre()+"/"+ruta.getTipo()+"/"+ruta.getDescripcion().replaceAll("\n", "~")))){
+                bwRutas.write(ruta.getCodigo()+"/"+ruta.getNombre()+"/"+ruta.getTipo()+"/"+ruta.getDescripcion().replaceAll("\n", "~"));
                 bwRutas.newLine();
             }
             
@@ -169,9 +172,9 @@ public void guardar(ArrayList rutas,ArrayList usuarios){
         for(int j=0;j<ruta.buses.size();j++){
             Bus bus= (Bus) ruta.buses.get(j);
             
-            if(!(this.yaExiste("fRutas",bus.getPlaca()+"/"+bus.getModelo()+"/"+bus.getMarca()+"/"+bus.getTipo()+"/"+bus.getCapacidad()+"/"+ruta.getNombre()))){
-                bwRutas.write(bus.getPlaca()+"/"+bus.getModelo()+"/"+bus.getMarca()+"/"+bus.getTipo()+"/"+bus.getCapacidad()+"/"+ruta.getNombre());
-                bwRutas.newLine();
+            if(!(this.yaExiste("fBus",bus.getPlaca()+"/"+bus.getModelo()+"/"+bus.getMarca()+"/"+bus.getTipo()+"/"+bus.getCapacidad()+"/"+ruta.getNombre()))){
+                bwBus.write(bus.getPlaca()+"/"+bus.getModelo()+"/"+bus.getMarca()+"/"+bus.getTipo()+"/"+bus.getCapacidad()+"/"+ruta.getNombre());
+                bwBus.newLine();
             }
         }
         }
@@ -179,8 +182,8 @@ public void guardar(ArrayList rutas,ArrayList usuarios){
         for(int i=0;i<usuarios.size();i++){
             Usuario usuario= (Usuario) usuarios.get(i);
             if(!(this.yaExiste("fUsuarios",usuario.getNumero()+"/"+usuario.getIdentificacion()+"/"+usuario.getNombre()+"/"+usuario.getDireccion()+"/"+usuario.getFecha()+"/"+usuario.getSaldo()))){
-                bwRutas.write(usuario.getNumero()+"/"+usuario.getIdentificacion()+"/"+usuario.getNombre()+"/"+usuario.getDireccion()+"/"+usuario.getFecha()+"/"+usuario.getSaldo());
-                bwRutas.newLine();
+                bwUsuarios.write(usuario.getNumero()+"/"+usuario.getIdentificacion()+"/"+usuario.getNombre()+"/"+usuario.getDireccion()+"/"+usuario.getFecha()+"/"+usuario.getSaldo());
+                bwUsuarios.newLine();
             }
             
         }
@@ -189,9 +192,9 @@ public void guardar(ArrayList rutas,ArrayList usuarios){
         for(int j=0;j<usuario.fechaDescuento.size();j++){
             String fechaDescuento= (String) usuario.fechaDescuento.get(j);
             
-            if(!(this.yaExiste("fRutas",usuario.getIdentificacion()+"_"+fechaDescuento))){
-                bwRutas.write(usuario.getIdentificacion()+"_"+fechaDescuento);
-                bwRutas.newLine();
+            if(!(this.yaExiste("fDescuento",usuario.getIdentificacion()+"_"+fechaDescuento))){
+                bwDescuentos.write(usuario.getIdentificacion()+"_"+fechaDescuento);
+                bwDescuentos.newLine();
             }
         }
         }
@@ -200,9 +203,9 @@ public void guardar(ArrayList rutas,ArrayList usuarios){
         for(int j=0;j<usuario.fechaRecarga.size();j++){
             String fechaRecarga= (String) usuario.fechaRecarga.get(j);
             
-            if(!(this.yaExiste("fRutas",usuario.getIdentificacion()+"_"+fechaRecarga))){
-                bwRutas.write(usuario.getIdentificacion()+"_"+fechaRecarga);
-                bwRutas.newLine();
+            if(!(this.yaExiste("fRecargas",usuario.getIdentificacion()+"_"+fechaRecarga))){
+                bwRecargas.write(usuario.getIdentificacion()+"_"+fechaRecarga);
+                bwRecargas.newLine();
             }
         }
         }
@@ -214,7 +217,125 @@ public void guardar(ArrayList rutas,ArrayList usuarios){
         }
     }
 
+public void cargarDatos(SIT miSIT){
+    String linea;
+    String bus[]=new String[5];
+    String ruta[]=new String[3];
+    String descuento[]=new String[1];
+    String recarga[]=new String[1];
+    String usuario[]=new String[5];
+    int i=0;
+    try{
+        while((linea=brRutas.readLine())!= null){
+            ruta=linea.split("/");
+            Ruta rutas=new Ruta();
+            rutas.setCodigo(ruta[0]);
+            rutas.setNombre(ruta[1]);
+            rutas.setTipo(ruta[2]);
+            rutas.setDescripcion(ruta[3].replaceAll("~", "\n"));
+            try{
+                miSIT.agregarRuta(rutas);
+                //JOptionPane.showMessageDialog(null, rutas.getCodigo());
+                i=0;
+            }catch(Exception e){
+                e.printStackTrace();
+            System.out.println("error"+e.getMessage());
+            }
+            
+        }
+        while((linea=brBus.readLine())!= null){
+            bus=linea.split("/");
+            Bus buses=new Bus();
+            buses.setCapacidad(bus[4]);
+            buses.setMarca(bus[2]);
+            buses.setModelo(bus[1]);
+            buses.setPlaca(bus[0]);
+            buses.setTipo(bus[3]);
+            try{
+                miSIT.agregarBusRuta(buses, miSIT.getRuta(bus[5]));
+                i=0;
+            }catch(Exception e){
+                e.printStackTrace();
+            System.out.println("error"+e.getMessage());
+            }
+            
+        }
+        while((linea=brUsuarios.readLine())!= null){
+            usuario=linea.split("/");
+            Usuario usuarios=new Usuario();
+            
+            usuarios.setNumero(usuario[0]);
+            usuarios.setIdentificacion(usuario[1]);
+            usuarios.setNombre(usuario[2]);
+            usuarios.setDireccion(usuario[3]);
+            usuarios.setFecha(usuario[4]);
+            usuarios.setSaldo(Double.parseDouble(usuario[5]));
+            
+            try{
+                miSIT.agregarUsuario(usuarios);
+                i=0;
+            }catch(Exception e){
+                e.printStackTrace();
+            System.out.println("error"+e.getMessage());
+            }
+            
+        }
+        
+            while((linea=brDescuentos.readLine())!= null){
+                descuento=linea.split("_");
+                for(int j=0;j<miSIT.usuarios.size();j++){
+                    Usuario usuarios = (Usuario)miSIT.usuarios.get(j);
+                    if(descuento[0].equals(usuarios.getIdentificacion())){
+                        usuarios.addDescuento(descuento[1]);
+                        miSIT.usuarios.set(j, usuarios);
+                    }
+                }
+                
+            
+            try{
+                i=0;
+            }catch(Exception e){
+                e.printStackTrace();
+            System.out.println("error"+e.getMessage());
+            }
+            }
+            
+        while((linea=brRecargas.readLine())!= null){
+                descuento=linea.split("_");
+                for(int j=0;j<miSIT.usuarios.size();j++){
+                    Usuario usuarios = (Usuario)miSIT.usuarios.get(j);
+                    if(descuento[0].equals(usuarios.getIdentificacion())){
+                        usuarios.addRecarga(descuento[1]);
+                        miSIT.usuarios.set(j, usuarios);
+                    }
+                }
+                
+            
+            try{
+                i=0;
+            }catch(Exception e){
+                e.printStackTrace();
+            System.out.println("error"+e.getMessage());
+            }
+            }
+    }catch(IOException e){
+            e.printStackTrace();
+            System.out.println("error"+e.getMessage());
+        }
+}
 
+public void cerrar(){
+    try{
+    bwBus.close();
+    bwRutas.close();
+    bwUsuarios.close();
+    bwDescuentos.close();
+    bwRecargas.close();
+    }catch(Exception e){
+            e.printStackTrace();
+            System.out.println("error"+e.getMessage());
+        }
+}
 
 
 

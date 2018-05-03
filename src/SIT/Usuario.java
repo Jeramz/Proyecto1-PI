@@ -65,6 +65,14 @@ public class Usuario {
     public String getFecha(){
         return fecha;
     }
+    
+    public void addDescuento(String descuento){
+        fechaDescuento.add(descuento);
+    }
+    
+    public void addRecarga(String recarga){
+        fechaRecarga.add(recarga);
+    }
 
     public void recarga(double valorRecarga, String fecha){
         saldo+=valorRecarga;

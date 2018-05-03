@@ -243,7 +243,8 @@ public class SIT {
         String respuesta="Codigo/Nombre/Tipo/Descripcion";
         for(int i=0;i<rutas.size();i++){
             Ruta ruta=(Ruta) rutas.get(i);
-            if(ruta.getCodigo().equals(codigo)||ruta.getNombre().equals(nombre)||ruta.getTipo().equals(tipo)){
+            
+            if(codigo.equals(ruta.getCodigo())||ruta.getNombre().equals(nombre)||ruta.getTipo().equals(tipo)){
                 respuesta+="\n"+ruta.getCodigo()+"/"+ruta.getNombre()+"/"+ruta.getTipo()+"\n"+ruta.getDescripcion()+"\n-----------------------------------------------------";
                 existe=true;
             }
