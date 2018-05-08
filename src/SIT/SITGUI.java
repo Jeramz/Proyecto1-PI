@@ -5,10 +5,13 @@
  */
 package SIT;
 
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import javax.swing.JComboBox;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -32,7 +35,8 @@ public class SITGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-
+        
+        cerrar();
         guardarDatos=new TextFile();
         miSIT=new SIT();
         listaRutas=new String[0];
@@ -1047,6 +1051,21 @@ public class SITGUI extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    public void cerrar(){
+        this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        this.addWindowListener(new WindowAdapter(){
+              public void windowClosing(WindowEvent e){
+                  int valor=JOptionPane.showConfirmDialog(null, "¿Desea cerrar el programa? los datos se guardarán automáticamente","Advertencia",JOptionPane.YES_NO_OPTION);
+                  if(valor==JOptionPane.YES_OPTION){
+                      guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
+                      guardarDatos.cerrar();
+                      System.exit(0);
+                  }
+              }
+        });
+        this.setVisible(true);
+    }
 
     //Actualiza los elementos en el comboBox
     public void setcombo(String[] lista,JComboBox combo ){
@@ -1326,8 +1345,7 @@ public class SITGUI extends javax.swing.JFrame {
     private void btRecargasConsultarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecargasConsultarTarjetaActionPerformed
         // TODO add your handling code here:
         String mes = comboMeses.getSelectedItem().toString();
-        guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
-        guardarDatos.cerrar();
+        
         taTarjetas.setText(miSIT.consultarRecargas(mes));
     }//GEN-LAST:event_btRecargasConsultarTarjetaActionPerformed
 
