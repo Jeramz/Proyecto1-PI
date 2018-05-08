@@ -49,7 +49,7 @@ public class SIT {
         for(int i=0;i<usuarios.size();i++){
             Usuario usuario=(Usuario) usuarios.get(i);
             if(usuario.getDireccion().equals(direccion)||usuario.getFecha().equals(fecha)||usuario.getIdentificacion().equals(identificacion)||usuario.getNombre().equals(nombre)||usuario.getNumero().equals(numero)||usuario.getSaldo()==saldo){
-                respuesta+="\n"+usuario.getNumero()+"/"+usuario.getIdentificacion()+"/"+usuario.getNombre()+"/"+usuario.getDireccion()+"/"+usuario.getFecha()+"/"+usuario.getSaldo();
+                respuesta+="\n"+usuario.getNumero()+"_"+usuario.getIdentificacion()+"_"+usuario.getNombre()+"_"+usuario.getDireccion()+"_"+usuario.getFecha()+"_"+usuario.getSaldo();
                 existe=true;
             }
         }
