@@ -19,7 +19,12 @@ import java.util.ArrayList;
  * @author Jesus
  */
 public class TextFile {
-
+    String rutaBus="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/buses.txt",
+           rutaRutas="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/rutas.txt",
+           rutaUsuarios="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/usuarios.txt",
+           rutaDescuentos="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/descuentos.txt",
+           rutaRecargas="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/recargas.txt";
+    
     FileInputStream fBus,
                     fRutas,
                     fUsuarios,
@@ -54,17 +59,17 @@ public class TextFile {
    public TextFile(){
        
      try{
-       fBus=new FileInputStream("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\buses.txt");
-       fRutas=new FileInputStream("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\rutas.txt");
-       fUsuarios=new FileInputStream("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\usuarios.txt");
-       fDescuentos=new FileInputStream("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\descuentos.txt");
-       fRecargas=new FileInputStream("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\recargas.txt");
+       fBus=new FileInputStream(rutaBus);
+       fRutas=new FileInputStream(rutaBus);
+       fUsuarios=new FileInputStream(rutaUsuarios);
+       fDescuentos=new FileInputStream(rutaDescuentos);
+       fRecargas=new FileInputStream(rutaRecargas);
 
-       fwBus=new FileWriter("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\buses.txt",true);
-       fwRutas=new FileWriter("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\rutas.txt",true);
-       fwUsuarios=new FileWriter("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\usuarios.txt",true);
-       fwDescuentos=new FileWriter("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\descuentos.txt",true);
-       fwRecargas=new FileWriter("C:\\Users\\Jesus\\Desktop\\Proyecto\\Proyecto1-PI\\src\\SIT\\recargas.txt",true);
+       fwBus=new FileWriter(rutaBus,true);
+       fwRutas=new FileWriter(rutaRutas,true);
+       fwUsuarios=new FileWriter(rutaUsuarios,true);
+       fwDescuentos=new FileWriter(rutaDescuentos,true);
+       fwRecargas=new FileWriter(rutaRecargas,true);
 
        bwBus=new BufferedWriter(fwBus);
        bwRutas=new BufferedWriter(fwRutas);

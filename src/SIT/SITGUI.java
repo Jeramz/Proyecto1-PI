@@ -38,6 +38,8 @@ public class SITGUI extends javax.swing.JFrame {
         
         cerrar();
         guardarDatos=new TextFile();
+        guardarDatosDB=new ManejadorDatos();
+        guardarDatosDB.abrirConexionBD();
         miSIT=new SIT();
         listaRutas=new String[0];
         jLabel1 = new javax.swing.JLabel();
@@ -1060,6 +1062,8 @@ public class SITGUI extends javax.swing.JFrame {
                   if(valor==JOptionPane.YES_OPTION){
                       guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
                       guardarDatos.cerrar();
+                      guardarDatosDB.guardarDatos(miSIT.rutas, miSIT.usuarios);
+                      guardarDatosDB.cerrarConexionBD();
                       System.exit(0);
                   }
               }
@@ -1325,6 +1329,7 @@ public class SITGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btDescontarTarjetaActionPerformed
     private void btCargarDatosActionPerformed(java.awt.event.ActionEvent evt){
         guardarDatos.cargarDatos(miSIT);
+        guardarDatosDB.CargarDatos(miSIT);
         JOptionPane.showMessageDialog(null, "Se han cargado los datos");
         this.setcombo(listaRutas, comboRutaBusAgregar);
         this.setcombo(listaRutas, comboRutaBusConsultar);
@@ -1392,7 +1397,8 @@ public class SITGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-     TextFile guardarDatos;
+    TextFile guardarDatos;
+    ManejadorDatos guardarDatosDB;
     SIT miSIT;
     String listaRutas[];
     String listaMeses[]={"Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"};
