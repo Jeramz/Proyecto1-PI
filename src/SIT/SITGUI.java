@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -1320,15 +1321,19 @@ public class SITGUI extends javax.swing.JFrame {
         try{
         String identificacion=tfIdentificacionDescontarTarjeta.getText();
         double saldo=Double.parseDouble(tfSaldoDescontarTarjeta.getText());
+        if(saldo>0){
         tfIdentificacionDescontarTarjeta.setText("");
         tfSaldoDescontarTarjeta.setText("");
         miSIT.descontarUsuario(identificacion, saldo);
+        }else{
+            JOptionPane.showMessageDialog(null, "El valor ingresado tiene que ser mayor a 0");
+        }
         }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido");
         }
     }//GEN-LAST:event_btDescontarTarjetaActionPerformed
     private void btCargarDatosActionPerformed(java.awt.event.ActionEvent evt){
-        guardarDatos.cargarDatos(miSIT);
+        //guardarDatos.cargarDatos(miSIT);
         guardarDatosDB.CargarDatos(miSIT);
         JOptionPane.showMessageDialog(null, "Se han cargado los datos");
         this.setcombo(listaRutas, comboRutaBusAgregar);
@@ -1339,9 +1344,13 @@ public class SITGUI extends javax.swing.JFrame {
         try{
         String identificacion=tfIdentificacionRecargarTarjeta.getText();
         double saldo=Double.parseDouble(tfSaldoRecargarTarjeta.getText());
+        if(saldo>0){
         tfIdentificacionRecargarTarjeta.setText("");
         tfSaldoRecargarTarjeta.setText("");
         miSIT.recargarUsuario(identificacion,saldo);
+        }else{
+            JOptionPane.showMessageDialog(null, "El valor ingresado tiene que ser mayor a 0");
+        }
         }catch(NumberFormatException ex){
             JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido");
         }
