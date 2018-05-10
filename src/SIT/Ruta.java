@@ -58,12 +58,12 @@ public class Ruta {
     public void agregarBus(Bus bus){
         boolean existe=false;
         if(bus.getCapacidad().equals("")||bus.getMarca().equals("")||bus.getModelo().equals("")||bus.getPlaca().equals("")||bus.getTipo().equals("")){
-            JOptionPane.showMessageDialog(null, "Debe llenar todos los campos");
+            JOptionPane.showMessageDialog(null, "Debe llenar todos los campos","Adverntecia",JOptionPane.WARNING_MESSAGE);
         }else{
             for(int i=0;i<buses.size();i++){
                 Bus auxBus= (Bus)buses.get(i);
                 if(auxBus.getPlaca().equals(bus.getPlaca())){
-                    JOptionPane.showMessageDialog(null, "El bus ingresado ya existe");
+                    JOptionPane.showMessageDialog(null, "El bus ingresado ya existe","Error",JOptionPane.ERROR_MESSAGE);
                     existe=true;
                 }
             }
@@ -84,7 +84,7 @@ public class Ruta {
             }
         }
         if(!existe){
-            JOptionPane.showMessageDialog(null, "No existe ningun bus con esas caracteristicas");
+            JOptionPane.showMessageDialog(null, "No existe ningun bus con esas caracteristicas","Error",JOptionPane.ERROR_MESSAGE);
         }
         return respuesta;
     }

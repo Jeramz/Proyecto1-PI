@@ -112,7 +112,7 @@ public class ManejadorDatos {
                 sql_guardarDescuentos="INSERT INTO descuentos VALUES ('" +
                     usuario.getIdentificacion() + "', '" + (descuentos[0]+"/"+descuentos[1]+"/"+descuentos[2])+  "', " +
                     descuentos[3] + ")";
-                break;
+                
                 }
                 
                 try{
@@ -142,7 +142,7 @@ public class ManejadorDatos {
                     usuario.getIdentificacion() + "', '" + (recargas[0]+"/"+recargas[1]+"/"+recargas[2])+  "', " +
                     recargas[3] + ")";
             
-            break;
+            
             }
             
             try{

@@ -28,12 +28,12 @@ public class SIT {
     public void agregarUsuario(Usuario usuario){
         boolean existe=false;
         if(usuario.getDireccion().equals("")||usuario.getFecha().equals("")||usuario.getIdentificacion().equals("")||usuario.getNombre().equals("")||usuario.getNumero().equals("")){
-            JOptionPane.showMessageDialog(null, "Faltan datos por ingresar");
+            JOptionPane.showMessageDialog(null, "Faltan datos por ingresar","Advertencia",JOptionPane.WARNING_MESSAGE);
         }else{
             for(int i=0;i<usuarios.size();i++){
                 Usuario auxUsuario=(Usuario)usuarios.get(i);
                 if(usuario.getIdentificacion().equals(auxUsuario.getIdentificacion())){
-                    JOptionPane.showMessageDialog(null, "El usuario ingresado ya existe");
+                    JOptionPane.showMessageDialog(null, "El usuario ingresado ya existe","Error",JOptionPane.ERROR_MESSAGE);
                     existe=true;
                 }
             }
@@ -54,7 +54,7 @@ public class SIT {
             }
         }
         if(!existe){
-            JOptionPane.showMessageDialog(null, "No existe ningun Usuario con esas datos");
+            JOptionPane.showMessageDialog(null, "No existe ningun Usuario con esos datos","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
         return respuesta;
     }
@@ -62,11 +62,11 @@ public class SIT {
     public String listarUsuarios(){
         String respuesta="Numero/Identificacion/Nombre/Direccion/Fecha/Saldo";
         if(usuarios.size()==0){
-            JOptionPane.showMessageDialog(null, "No hay usuarios registrados");
+            JOptionPane.showMessageDialog(null, "No hay usuarios registrados","Advertencia", JOptionPane.WARNING_MESSAGE);
         }else{
         for(int i=0;i<usuarios.size();i++){
             Usuario usuario=(Usuario) usuarios.get(i);
-            respuesta+="\n"+usuario.getNumero()+"/"+usuario.getIdentificacion()+"/"+usuario.getNombre()+"/"+usuario.getDireccion()+"/"+usuario.getFecha()+"/"+usuario.getSaldo();
+            respuesta+="\n"+usuario.getNumero()+"_"+usuario.getIdentificacion()+"_"+usuario.getNombre()+"_"+usuario.getDireccion()+"_"+usuario.getFecha()+"_"+usuario.getSaldo();
         }
         }
         return respuesta;
@@ -98,7 +98,7 @@ public class SIT {
 
       }
       if(!existe){
-          JOptionPane.showMessageDialog(null, "No se ha encontrado ningun usuario con ese numero de identificación");
+          JOptionPane.showMessageDialog(null, "No se ha encontrado ningun usuario con ese numero de identificación","Error",JOptionPane.ERROR_MESSAGE);
       }
     }
 
@@ -116,7 +116,7 @@ public class SIT {
         }
       }
       if(!existe){
-          JOptionPane.showMessageDialog(null, "No se ha encontrado ningun usuario con ese numero de identificación");
+          JOptionPane.showMessageDialog(null, "No se ha encontrado ningun usuario con ese numero de identificación","Error",JOptionPane.ERROR_MESSAGE);
       }
     }
 
@@ -223,7 +223,7 @@ public class SIT {
     public void agregarRuta(Ruta ruta){
         boolean existe=false;
         if(ruta.getCodigo().equals("")||ruta.getDescripcion().equals("")||ruta.getNombre().equals("")||ruta.getTipo().equals("")){
-            JOptionPane.showMessageDialog(null, "Faltan datos por ingresar");
+            JOptionPane.showMessageDialog(null, "Faltan datos por ingresar","Advertencia",JOptionPane.WARNING_MESSAGE);
         }else{
             for(int i=0;i<rutas.size();i++){
                 Ruta auxRuta=(Ruta)rutas.get(i);
@@ -249,15 +249,15 @@ public class SIT {
             }
         }
         if(!existe){
-            JOptionPane.showMessageDialog(null, "No existe ninguna ruta con esas caracteristicas");
+            JOptionPane.showMessageDialog(null, "No existe ninguna ruta con esas caracteristicas","Error",JOptionPane.ERROR_MESSAGE);
         }
         return respuesta;
     }
 
     public String listarRutas(){
-        String respuesta="Codigo/Nombre/Descripcion";
+        String respuesta="Codigo/Nombre/Tipo/Descripcion";
         if(rutas.size()==0){
-          JOptionPane.showMessageDialog(null, "No hay Rutas registradas");
+          JOptionPane.showMessageDialog(null, "No hay Rutas registradas","Advertencia",JOptionPane.WARNING_MESSAGE);
         }else{
           for(int i=0;i<rutas.size();i++){
               Ruta ruta=(Ruta) rutas.get(i);
@@ -287,7 +287,7 @@ public class SIT {
         String listaBuses="Placa/Modelo/Marca/Tipo/Capacidad/Ruta";
         if((placa.equals("")&&modelo.equals("")&&marca.equals("")&&tipo.equals("")&&capacidad.equals(""))){
             if(ruta.listarBuses().equals("")){
-                JOptionPane.showMessageDialog(null, "No hay buses en la ruta");
+                JOptionPane.showMessageDialog(null, "No hay buses en la ruta","Advertencia",JOptionPane.WARNING_MESSAGE);
             }else{
             listaBuses+=ruta.listarBuses();
             }

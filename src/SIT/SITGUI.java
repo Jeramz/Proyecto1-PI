@@ -1059,7 +1059,7 @@ public class SITGUI extends javax.swing.JFrame {
         this.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         this.addWindowListener(new WindowAdapter(){
               public void windowClosing(WindowEvent e){
-                  int valor=JOptionPane.showConfirmDialog(null, "¿Desea cerrar el programa? los datos se guardarán automáticamente","Advertencia",JOptionPane.YES_NO_OPTION);
+                  int valor=JOptionPane.showConfirmDialog(null, "¿Desea guardar los datos antes de cerrar? ","Advertencia",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
                   if(valor==JOptionPane.YES_OPTION){
                       guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
                       guardarDatos.cerrar();
@@ -1091,7 +1091,7 @@ public class SITGUI extends javax.swing.JFrame {
         String ruta =comboRutaBusConsultar.getSelectedItem().toString();
         listaBuses=miSIT.listarBusesRuta();
         }catch(NullPointerException ex){
-            JOptionPane.showMessageDialog(null, "No hay buses");
+            JOptionPane.showMessageDialog(null, "No hay buses","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
         taBuses.setText(listaBuses);
     }//GEN-LAST:event_btListarBusesActionPerformed
@@ -1207,7 +1207,7 @@ public class SITGUI extends javax.swing.JFrame {
         String ruta=comboRutaBusAgregar.getSelectedItem().toString();
         miSIT.agregarBusRuta(bus,miSIT.getRuta(ruta));
         }catch(NullPointerException ex){
-            JOptionPane.showMessageDialog(null, "Debe crear y seleccionar una ruta antes de crear un bus");
+            JOptionPane.showMessageDialog(null, "Debe crear y seleccionar una ruta antes de crear un bus","Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btAgregarBusActionPerformed
 
@@ -1232,7 +1232,7 @@ public class SITGUI extends javax.swing.JFrame {
 
         taBuses.setText(listaBuses);
         }catch(NullPointerException ex){
-            JOptionPane.showMessageDialog(null, "Error....debe crear una ruta antes de consultar");
+            JOptionPane.showMessageDialog(null, "Error....debe crear una ruta antes de consultar","Error",JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_btConsultarBusActionPerformed
 
@@ -1264,7 +1264,7 @@ public class SITGUI extends javax.swing.JFrame {
         miSIT.agregarUsuario(usuario);
         }
         catch(NumberFormatException ex){
-            JOptionPane.showMessageDialog(null, "El valor ingresado en saldo debe ser un número (0-9)");
+            JOptionPane.showMessageDialog(null, "El valor ingresado en saldo debe ser un número (0-9)","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btAgregarUsuarioActionPerformed
 
@@ -1326,10 +1326,10 @@ public class SITGUI extends javax.swing.JFrame {
         tfSaldoDescontarTarjeta.setText("");
         miSIT.descontarUsuario(identificacion, saldo);
         }else{
-            JOptionPane.showMessageDialog(null, "El valor ingresado tiene que ser mayor a 0");
+            JOptionPane.showMessageDialog(null, "El valor ingresado tiene que ser mayor a 0","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
         }catch(NumberFormatException ex){
-            JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido");
+            JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btDescontarTarjetaActionPerformed
     private void btCargarDatosActionPerformed(java.awt.event.ActionEvent evt){
@@ -1349,10 +1349,10 @@ public class SITGUI extends javax.swing.JFrame {
         tfSaldoRecargarTarjeta.setText("");
         miSIT.recargarUsuario(identificacion,saldo);
         }else{
-            JOptionPane.showMessageDialog(null, "El valor ingresado tiene que ser mayor a 0");
+            JOptionPane.showMessageDialog(null, "El valor ingresado tiene que ser mayor a 0","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
         }catch(NumberFormatException ex){
-            JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido");
+            JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btRecargarTarjetaActionPerformed
 
