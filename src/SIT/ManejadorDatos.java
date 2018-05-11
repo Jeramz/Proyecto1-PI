@@ -1,7 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+  Clase ManejadorDatos: guarda los datos del programa (buses, rutas, usuarios) en sus respectivas tablas 
+  en una base de datos,se encargar de abrir y cerrar la conexión con la base de datos
+  Además, carga la información que se encuentra en la base de datos para ser usados en el programa.
+
+  Autor: Jesus Ramirez-1731388  Samuel Velasco-1731295 Andrés Felipe-1730534
+  email: jesus.zuluaga@correounivalle.edu.co - samuel.velasco@correounivalle.edu.co - andres.lopez@correounivalle.edu.co
+  fecha: 10 mayo 2018
  */
 package SIT;
 

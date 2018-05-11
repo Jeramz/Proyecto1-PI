@@ -1,7 +1,15 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+  Clase SIT: Agrega nuevos usuarios, permite consultar a un usuario en especifico, lista a todos los usuarios.
+  Además, realiza la recarga o descuento de la tarjeta de un usuario dado. permite consultar todas las recargas
+  o descuentos realizadas durante el mes por los usuarios.
+  Permite agregar nuevas rutas al programa, así como consultar una ruta y listar todas las rutas existentes.
+  permite agregar un bus a una ruta en específico, permite también consultar una bus de una ruta en específico, así como 
+  listar todos los buses existentes.
+  
+
+  Autor: Jesus Ramirez-1731388  Samuel Velasco-1731295 Andrés Felipe-1730534
+  email: jesus.zuluaga@correounivalle.edu.co - samuel.velasco@correounivalle.edu.co - andres.lopez@correounivalle.edu.co
+  fecha: 10 mayo 2018
  */
 package SIT;
 

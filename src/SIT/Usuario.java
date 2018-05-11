@@ -1,7 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+  Clase Usuario: le asigna los valores básicos a un usuario (numero, identificacion, nombre, direccion, fecha),
+  así como también los retorna. permite realizar una recarga o descuento a el usuario. guarda en una lista todas las 
+  fechas en las que haya hecho una recarga o descuento, así como el valor de dicha transacción. Además, retorna la 
+  cantidad de dinero gastado y recargado durante el mes.
+
+  Autor: Jesus Ramirez-1731388  Samuel Velasco-1731295 Andrés Felipe-1730534
+  email: jesus.zuluaga@correounivalle.edu.co - samuel.velasco@correounivalle.edu.co - andres.lopez@correounivalle.edu.co
+  fecha: 10 mayo 2018
  */
 package SIT;
 

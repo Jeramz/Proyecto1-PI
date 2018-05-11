@@ -1,7 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Clase TextFile:Crea los archivos .txt donde se guardará la información
+ referente a los buses, rutas y usuarios. Guarda los datos de las rutas, buses y usuarios
+ en sus respectivos archivos .txt, lee y carga los datos guardados 
+ de las rutas, buses y usuarios con anterioridad de los archivos. Al finalizar,
+ cierra los archivos .txt
+
+  Autor: Jesus Ramirez-1731388  Samuel Velasco-1731295 Andrés Felipe-1730534
+  email: jesus.zuluaga@correounivalle.edu.co - samuel.velasco@correounivalle.edu.co - andres.lopez@correounivalle.edu.co
+  fecha: 10 mayo 2018
  */
 package SIT;
 

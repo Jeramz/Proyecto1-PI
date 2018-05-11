@@ -1,8 +1,9 @@
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+  Clase SITGUI: Menú para el usuario
+  Autor: Jesus Ramirez-1731388  Samuel Velasco-1731295 Andrés Felipe-1730534
+  email: jesus.zuluaga@correounivalle.edu.co - samuel.velasco@correounivalle.edu.co - andres.lopez@correounivalle.edu.co
+  fecha: 10 mayo 2018
  */
 package SIT;
 
@@ -36,7 +37,7 @@ public class SITGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        
+
         cerrar();
         guardarDatos=new TextFile();
         guardarDatosDB=new ManejadorDatos();
@@ -198,42 +199,49 @@ public class SITGUI extends javax.swing.JFrame {
         panelAgregarBuses.setLayout(panelAgregarBusesLayout);
         panelAgregarBusesLayout.setHorizontalGroup(
             panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarBusesLayout.createSequentialGroup()
-                .addGap(0, 96, Short.MAX_VALUE)
+            .addGroup(panelAgregarBusesLayout.createSequentialGroup()
                 .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                        .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lbTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-                            .addComponent(lbPlacaBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(tfTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
-                            .addComponent(tfPlacaBusAgregar))
-                        .addGap(18, 18, 18)
-                        .addComponent(lbModeloBusAgregar)
-                        .addGap(18, 18, 18)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarBusesLayout.createSequentialGroup()
+                        .addGap(0, 98, Short.MAX_VALUE)
                         .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                                .addComponent(lbCapacidadBusAgregar)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(tfCapacidadBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(lbTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
+                                    .addComponent(lbPlacaBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(tfTipoBusAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 70, Short.MAX_VALUE)
+                                    .addComponent(tfPlacaBusAgregar))
+                                .addGap(18, 18, 18)
+                                .addComponent(lbModeloBusAgregar)
+                                .addGap(18, 18, 18)
+                                .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(panelAgregarBusesLayout.createSequentialGroup()
+                                        .addComponent(lbCapacidadBusAgregar)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(tfCapacidadBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(panelAgregarBusesLayout.createSequentialGroup()
+                                        .addComponent(tfModeloBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(31, 31, 31)
+                                        .addComponent(lbMarcaBusAgregar))))
                             .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                                .addComponent(tfModeloBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(lbMarcaBusAgregar))
+                                .addComponent(lbRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(comboRutaBusAgregar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(18, 18, 18)
+                                .addComponent(btAgregarBus)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
+                        .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                                .addGap(56, 56, 56)
-                                .addComponent(btAgregarBus))))
-                    .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                        .addComponent(lbRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(comboRutaBusAgregar, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGap(84, 84, 84)))
-                .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(tfMarcaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cargarDatosTF, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btCargarDatosBD))
-                .addContainerGap(22, Short.MAX_VALUE))
+                                .addComponent(tfMarcaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarBusesLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
+                                .addComponent(btCargarDatosBD))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelAgregarBusesLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(cargarDatosTF, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
         );
         panelAgregarBusesLayout.setVerticalGroup(
             panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -248,7 +256,7 @@ public class SITGUI extends javax.swing.JFrame {
                     .addComponent(tfMarcaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(panelAgregarBusesLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbTipoBusAgregar)
                             .addComponent(tfTipoBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -258,10 +266,11 @@ public class SITGUI extends javax.swing.JFrame {
                         .addGroup(panelAgregarBusesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(lbRutaBusAgregar)
                             .addComponent(comboRutaBusAgregar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btAgregarBus)
-                            .addComponent(btCargarDatosBD))
-                        .addContainerGap())
+                            .addComponent(btAgregarBus))
+                        .addContainerGap(39, Short.MAX_VALUE))
                     .addGroup(panelAgregarBusesLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(btCargarDatosBD)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(cargarDatosTF))))
         );
@@ -1544,5 +1553,6 @@ public class SITGUI extends javax.swing.JFrame {
     private javax.swing.JTextField tfTipoBusConsultar;
     private javax.swing.JTextField tfTipoRutaAgregar;
     private javax.swing.JTextField tfTipoRutaConsultar;
+// End of variables declaration//GEN-END:variables
     // End of variables declaration//GEN-END:variables
 }
