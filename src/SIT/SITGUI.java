@@ -187,6 +187,11 @@ public class SITGUI extends javax.swing.JFrame {
         });
 
         btCargarDatosBD.setText("Cargar datos BD");
+        btCargarDatosBD.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btCargarDatosBDActionPerformed(evt);
+            }
+        });
 
         cargarDatosTF.setText("CargarDatos TF");
         cargarDatosTF.addActionListener(new java.awt.event.ActionListener() {
@@ -1353,13 +1358,14 @@ public class SITGUI extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null,"El valor ingresado en saldo no es valido","Advertencia",JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btDescontarTarjetaActionPerformed
-    private void btCargarDatosActionPerformed(java.awt.event.ActionEvent evt){
+    private void btCargarDatosBDActionPerformed(java.awt.event.ActionEvent evt){//GEN-FIRST:event_btCargarDatosBDActionPerformed
+        // TODO add your handling code here:
         //guardarDatos.cargarDatos(miSIT);
         guardarDatosDB.CargarDatos(miSIT);
         JOptionPane.showMessageDialog(null, "Se han cargado los datos");
         this.setcombo(listaRutas, comboRutaBusAgregar);
         this.setcombo(listaRutas, comboRutaBusConsultar);
-    }
+    }//GEN-LAST:event_btCargarDatosBDActionPerformed
     private void btRecargarTarjetaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btRecargarTarjetaActionPerformed
         // TODO add your handling code here:
         try{
