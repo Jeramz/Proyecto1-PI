@@ -1087,10 +1087,11 @@ public class SITGUI extends javax.swing.JFrame {
               public void windowClosing(WindowEvent e){
                   int valor=JOptionPane.showConfirmDialog(null, "¿Desea guardar los datos antes de cerrar? ","Advertencia",JOptionPane.YES_NO_OPTION,JOptionPane.WARNING_MESSAGE);
                   if(valor==JOptionPane.YES_OPTION){
-                      guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
-                      guardarDatos.cerrar();
                       guardarDatosDB.guardarDatos(miSIT.rutas, miSIT.usuarios);
                       guardarDatosDB.cerrarConexionBD();
+                      guardarDatos.guardar(miSIT.rutas, miSIT.usuarios);
+                      guardarDatos.cerrar();
+                      
                       System.exit(0);
                   }
               }

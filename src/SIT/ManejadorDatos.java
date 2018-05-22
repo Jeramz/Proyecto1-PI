@@ -47,8 +47,8 @@ public class ManejadorDatos {
                 ruta.getTipo() + "', '" + ruta.getDescripcion() + "')";
             }
         try{
-            Statement sentencia=conn.createStatement();
-            sentencia.executeUpdate(sql_guardarRutas);
+            Statement sentencia0=conn.createStatement();
+            sentencia0.executeUpdate(sql_guardarRutas);
             
         }
         catch(SQLException e){
@@ -175,11 +175,12 @@ public class ManejadorDatos {
         try{
             
         if(tabla.equals("rutas")){
-            Statement sentencia = conn.createStatement();
-            ResultSet tablaRutas = sentencia.executeQuery(sql_selectRutas);
+            Statement sentencia0 = conn.createStatement();
+            ResultSet tablaRutas = sentencia0.executeQuery(sql_selectRutas);
         while(tablaRutas.next()){                            
-               if(primaryKey.equals(tablaRutas.getString(1)));
+               if(tablaRutas.getString(1).equals(primaryKey)){
                respuesta=true;
+               }
             }
         }
         

@@ -25,11 +25,11 @@ import java.util.ArrayList;
  * @author Jesus
  */
 public class TextFile {
-    String rutaBus="/home/invitado/Descargas/Proyecto1-PI/Proyecto1-PI/src/SIT/buses.txt",
-           rutaRutas="/home/invitado/Descargas/Proyecto1-PI/Proyecto1-PI/src/SIT/rutas.txt",
-           rutaUsuarios="/home/invitado/Descargas/Proyecto1-PI/Proyecto1-PI/src/SIT/usuarios.txt",
-           rutaDescuentos="/home/invitado/Descargas/Proyecto1-PI/Proyecto1-PI/src/SIT/descuentos.txt",
-           rutaRecargas="/home/invitado/Descargas/Proyecto1-PI/Proyecto1-PI/src/SIT/recargas.txt";
+    String rutaBus="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/buses.txt",
+           rutaRutas="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/rutas.txt",
+           rutaUsuarios="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/usuarios.txt",
+           rutaDescuentos="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/descuentos.txt",
+           rutaRecargas="/home/invitado/NetBeansProjects/Proyecto1-PI/src/SIT/recargas.txt";
     
     FileInputStream fBus,
                     fRutas,
@@ -66,7 +66,7 @@ public class TextFile {
        
      try{
        fBus=new FileInputStream(rutaBus);
-       fRutas=new FileInputStream(rutaBus);
+       fRutas=new FileInputStream(rutaRutas);
        fUsuarios=new FileInputStream(rutaUsuarios);
        fDescuentos=new FileInputStream(rutaDescuentos);
        fRecargas=new FileInputStream(rutaRecargas);
